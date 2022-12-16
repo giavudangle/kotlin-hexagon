@@ -7,6 +7,11 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/kotlin-hexagon-api/pom.xml" />
         <option value="$PROJECT_DIR$/kotlin-hexagon-adapter/pom.xml" />
+        <option value="$PROJECT_DIR$/hexagon-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/hexagon-adapter/pom.xml" />
+        <option value="$PROJECT_DIR$/hexagon-api/pom.xml" />
+        <option value="$PROJECT_DIR$/hexagon-core/pom.xml" />
+        <option value="$PROJECT_DIR$/hexagon-shared/pom.xml" />
       </list>
     </option>
   </component>

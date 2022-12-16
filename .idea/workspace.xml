@@ -4,39 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="build codebase for kotlin-hexagon">
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-adapter/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/Application.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/MainController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/persistence/config/MyBatisConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/persistence/mapper/BaseMapper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/persistence/plugin/TimestampPlugin.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/repository/BaseRepositoryImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/migrations/V0___base.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/migrations/V1___data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/mybatis/mybaits-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-domain/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-domain/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-domain/src/main/java/com/vudang/kotlin/hexagon/domain/entity/Account.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-domain/src/main/java/com/vudang/kotlin/hexagon/domain/entity/BaseEntity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="build project layer">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-adapter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-shared/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-core/src/main/java/Application.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-core/src/main/java/MainController.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-domain/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-domain/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-domain/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-domain/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-domain/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-domain/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-shared/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +48,7 @@
     "last_opened_file_path": "/Users/legiavu.dang/Desktop/Learning/kotlin-hexagon",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.24626005",
+    "project.structure.side.proportion": "0.30879712",
     "settings.editor.selected.configurable": "build.tools"
   }
 }]]></component>
@@ -136,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669808027621</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="build project layer">
+      <created>1671173534523</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671173534523</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +129,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="build codebase for kotlin-hexagon" />
-    <option name="LAST_COMMIT_MESSAGE" value="build codebase for kotlin-hexagon" />
+    <MESSAGE value="build project layer" />
+    <option name="LAST_COMMIT_MESSAGE" value="build project layer" />
   </component>
 </project>
