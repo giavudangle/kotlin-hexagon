@@ -5,7 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="build codebase for kotlin-hexagon">
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-adapter/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/Application.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/MainController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/persistence/config/MyBatisConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/persistence/mapper/BaseMapper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/persistence/plugin/TimestampPlugin.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/repository/BaseRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/migrations/V0___base.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/migrations/V1___data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/mybatis/mybaits-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-domain/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-domain/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-domain/src/main/java/com/vudang/kotlin/hexagon/domain/entity/Account.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-domain/src/main/java/com/vudang/kotlin/hexagon/domain/entity/BaseEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-adapter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-shared/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-core/src/main/java/Application.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-core/src/main/java/MainController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-domain/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-domain/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-domain/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-domain/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-domain/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-domain/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-hexagon-shared/pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +46,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
+        <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -29,11 +61,6 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
-    <option name="disabledProfiles">
-      <list>
-        <option value="alibaba" />
-      </list>
-    </option>
   </component>
   <component name="ProjectId" id="2IG7cgrI713HXYCGLz7atekhDrK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -46,14 +73,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable": "SELECTIVE",
     "jdk.selected.JAVA_MODULE": "zulu-19",
     "last_opened_file_path": "/Users/legiavu.dang/Desktop/Learning/kotlin-hexagon",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.37931034",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.file-colors"
+    "project.structure.side.proportion": "0.24626005",
+    "settings.editor.selected.configurable": "build.tools"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kotlin-hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core" />
+      <recent name="$PROJECT_DIR$/kotlin-hexagon-core/src/main/java" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean" />
@@ -61,20 +95,20 @@
   </component>
   <component name="RunManager">
     <configuration name="ApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.vudang.kotlin.hexagon.ApplicationKt" />
-      <module name="kotlin-hexagon-core" />
+      <option name="MAIN_CLASS_NAME" value="com.vudang.kotlin.hexagon.core.ApplicationKt" />
+      <module name="hexagon-core" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
-      <module name="kotlin-hexagon-api" />
+      <module name="hexagon-api" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="kotlin-hexagon-api" />
+      <module name="hexagon-api" />
       <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />

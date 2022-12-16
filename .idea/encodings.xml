@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/kotlin-hexagon-adapter/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/kotlin-hexagon-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/kotlin-hexagon-api/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/kotlin-hexagon-core/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/kotlin-hexagon-core/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/kotlin-hexagon-domain/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/kotlin-hexagon-shared/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hexagon-adapter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hexagon-adapter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hexagon-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hexagon-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hexagon-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hexagon-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hexagon-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hexagon-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hexagon-shared/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

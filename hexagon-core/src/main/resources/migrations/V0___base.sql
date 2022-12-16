@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `ACCOUNT`(
+  `id` BIGINT(20) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
+  `createdAt` BIGINT(20) NOT NULL,
+  `updatedAt` BIGINT(20) NOT NULL,
+  `version` INT(10) NOT NULL,
+   PRIMARY KEY(`id`)
+)

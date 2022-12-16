@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -9,25 +8,30 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <name>kotlin-hexagon</name>
-    <groupId>com.vudang</groupId>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.vudang.kotlin.hexagon</groupId>
     <artifactId>kotlin-hexagon</artifactId>
+    <name>kotlin-hexagon</name>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <description>Demo project for Spring Boot</description>
 
     <modules>
-        <module>kotlin-hexagon-domain</module>
-        <module>kotlin-hexagon-adapter</module>
-        <module>kotlin-hexagon-core</module>
-        <module>kotlin-hexagon-shared</module>
-        <module>kotlin-hexagon-api</module>
+        <module>hexagon-domain</module>
+        <module>hexagon-adapter</module>
+        <module>hexagon-core</module>
+        <module>hexagon-shared</module>
+        <module>hexagon-api</module>
     </modules>
 
     <properties>
         <java.version>11</java.version>
         <kotlin.version>1.7.20</kotlin.version>
         <spring-boot.version>3.0.0</spring-boot.version>
+        <spring-context.version>6.0.2</spring-context.version>
+        <mybatis.version>3.0.0</mybatis.version>
+        <spring-context.version>6.0.2</spring-context.version>
+        <lombok.version>1.18.24</lombok.version>
+
     </properties>
 
     <dependencyManagement>
@@ -38,9 +42,111 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>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
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring-context.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-stdlib-jdk8</artifactId>
+                <version>${kotlin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-test</artifactId>
+                <version>${kotlin.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.vudang.kotlin.hexagon</groupId>
+                <artifactId>hexagon-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.vudang.kotlin.hexagon</groupId>
+                <artifactId>hexagon-shared</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.vudang.kotlin.hexagon</groupId>
+                <artifactId>hexagon-adapter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.vudang.kotlin.hexagon</groupId>
+                <artifactId>hexagon-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.vudang.kotlin.hexagon</groupId>
+                <artifactId>hexagon-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+
+
         </dependencies>
     </dependencyManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.diffplug.spotless</groupId>
+                <artifactId>spotless-maven-plugin</artifactId>
+                <version>2.27.0</version>
+                <configuration>
+                    <java>
+                        <googleJavaFormat>
+                            <version>1.8</version>
+                            <style>GOOGLE</style>
+                            <reflowLongStrings>true</reflowLongStrings>
+                        </googleJavaFormat>
+                    </java>
+                    <kotlin>
+                        <includes>
+                            <include>src/main/**/*.kt</include>
+                            <include>src/test/**/*.kt</include>
+                        </includes>
+                        <ktfmt>
+                            <version>0.40</version>
+                            <blockIndent>2</blockIndent>
+                            <continuationIndent>2</continuationIndent>
+                            <removeUnusedImport>true</removeUnusedImport>
+                            <style>GOOGLE</style>
+                        </ktfmt>
+                    </kotlin>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
