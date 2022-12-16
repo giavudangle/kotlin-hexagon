@@ -6,4 +6,7 @@ CREATE TABLE IF NOT EXISTS `ACCOUNT`(
   `updatedAt` BIGINT(20) NOT NULL,
   `version` INT(10) NOT NULL,
    PRIMARY KEY(`id`)
-)
+);
+
+INSERT INTO `ACCOUNT`
+VALUES(1,'account@gmail.com','password',1671086608000,1671086608000,0);

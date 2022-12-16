@@ -31,7 +31,7 @@
         <mybatis.version>3.0.0</mybatis.version>
         <spring-context.version>6.0.2</spring-context.version>
         <lombok.version>1.18.24</lombok.version>
-
+        <flyway.version>9.10.0</flyway.version>
     </properties>
 
     <dependencyManagement>
@@ -97,6 +97,11 @@
                 <version>${mybatis.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-core</artifactId>
+                <version>${flyway.version}</version>
+            </dependency>
 
 
         </dependencies>

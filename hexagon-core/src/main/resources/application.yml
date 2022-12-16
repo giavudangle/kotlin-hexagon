@@ -1,0 +1,18 @@
+spring:
+  application: kotlin-hexagon
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:public;MODE=MYSQL;DB_CLOSE_DELAY=-1;INIT=CREATE SCHEMA IF NOT EXISTS PUBLIC
+    username: sa
+    password: sa
+  flyway:
+    enabled: true
+    locations: classpath/migrations
+    schemas: PUBLIC
+
+javax:
+  persistence:
+    schema-generation:
+      database:
+        action: drop-and-create
+
