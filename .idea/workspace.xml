@@ -4,14 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="build project layer">
-      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
+    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="data layer">
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/persistence/mapper/AccountMapper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/repository/AccountRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/mybatis/account-mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/test/java/com/vudang/kotlin/hexagon/BaseTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/test/java/com/vudang/kotlin/hexagon/CustomApplication.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/test/java/com/vudang/kotlin/hexagon/CustomSpringBootContextLoader.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/test/java/com/vudang/kotlin/hexagon/TestApplication.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-core/src/test/java/com/vudang/kotlin/hexagon/core/repository/AccountRepositoryImplTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-domain/src/main/java/com/vudang/kotlin/hexagon/domain/exception/OptimisticConcurrentException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-domain/src/main/java/com/vudang/kotlin/hexagon/domain/repository/AccountRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-domain/src/main/java/com/vudang/kotlin/hexagon/domain/repository/BaseRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hexagon-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/persistence/config/MyBatisConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/persistence/config/MyBatisConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/resources/migrations/V0___base.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/migrations/V1__base.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/resources/migrations/V1___data.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/resources/mybatis/mybaits-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/persistence/mapper/BaseMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/persistence/mapper/BaseMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/repository/BaseRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/repository/BaseRepositoryImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/resources/migrations/V1__base.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/migrations/V1__base.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-domain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-shared/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-shared/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +51,10 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
+        <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="localRepository" value="$USER_HOME$/.m2/vudang" />
+        <option name="usePluginRegistry" value="true" />
+        <option name="userSettingsFile" value="$USER_HOME$/.m2/vudang-settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -44,20 +64,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable": "SELECTIVE",
-    "jdk.selected.JAVA_MODULE": "zulu-19",
-    "last_opened_file_path": "/Users/legiavu.dang/Desktop/Learning/kotlin-hexagon",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.30879712",
-    "settings.editor.selected.configurable": "build.tools"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable&quot;: &quot;SELECTIVE&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;zulu-19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/legiavu.dang/Desktop/Learning/kotlin-hexagon&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.30879712&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/kotlin-hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core" />
@@ -66,7 +86,9 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="mvn compile" />
       <command value="mvn clean" />
+      <command value="mvn install" />
     </option>
   </component>
   <component name="RunManager">
@@ -126,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671174166877</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="configure mybatis and flyway for core layer">
+      <created>1671176770542</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671176770542</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,6 +172,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="build codebase for kotlin-hexagon" />
     <MESSAGE value="build project layer" />
-    <option name="LAST_COMMIT_MESSAGE" value="build project layer" />
+    <MESSAGE value="configure mybatis for core layer" />
+    <MESSAGE value="configure mybatis and flyway for core layer" />
+    <MESSAGE value="data layer" />
+    <option name="LAST_COMMIT_MESSAGE" value="data layer" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

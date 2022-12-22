@@ -1,7 +1,6 @@
 package com.vudang.kotlin.hexagon.core.persistence.config
 
 import com.vudang.kotlin.hexagon.core.persistence.plugin.TimestampPlugin
-import org.apache.ibatis.session.SqlSession
 import javax.sql.DataSource
 import org.apache.ibatis.session.SqlSessionFactory
 import org.mybatis.spring.SqlSessionFactoryBean
@@ -41,8 +40,8 @@ open class MyBatisConfig {
   @Primary
   @Bean
   open fun sqlSessionTemplate(
-    @Qualifier("sqlSessionFactory")sqlSessionFactory: SqlSessionFactory
-  ) : SqlSessionTemplate {
+    @Qualifier("sqlSessionFactory") sqlSessionFactory: SqlSessionFactory
+  ): SqlSessionTemplate {
     return SqlSessionTemplate(sqlSessionFactory)
   }
 }
