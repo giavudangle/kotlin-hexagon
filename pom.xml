@@ -18,7 +18,6 @@
         <module>hexagon-domain</module>
         <module>hexagon-adapter</module>
         <module>hexagon-core</module>
-        <module>hexagon-shared</module>
         <module>hexagon-api</module>
     </modules>
 
@@ -26,7 +25,7 @@
         <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <kotlin.version>1.8.0-RC2</kotlin.version>
+        <kotlin.version>1.7.10</kotlin.version>
         <spring-boot.version>3.0.0</spring-boot.version>
         <spring-context.version>6.0.2</spring-context.version>
         <mybatis.version>3.0.0</mybatis.version>
@@ -57,7 +56,17 @@
             </dependency>
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-stdlib</artifactId>
+                <version>${kotlin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-stdlib-jdk8</artifactId>
+                <version>${kotlin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-stdlib-common</artifactId>
                 <version>${kotlin.version}</version>
             </dependency>
             <dependency>

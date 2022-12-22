@@ -1,8 +1,7 @@
 package com.vudang.kotlin.hexagon.domain.exception
 
-import com.vudang.kotlin.hexagon.shared.exception.BaseDomainException
 
-class OptimisticConcurrentException(reason: String?) : BaseDomainException(CODE, reason) {
+class OptimisticConcurrentException(reason: String?) : BaseDomainException(REASON, CODE) {
   constructor() : this(REASON) {}
 
   companion object {

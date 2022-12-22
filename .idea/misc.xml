@@ -8,13 +8,13 @@
         <option value="$PROJECT_DIR$/kotlin-hexagon-api/pom.xml" />
         <option value="$PROJECT_DIR$/kotlin-hexagon-adapter/pom.xml" />
         <option value="$PROJECT_DIR$/hexagon-adapter/pom.xml" />
-        <option value="$PROJECT_DIR$/hexagon-shared/pom.xml" />
         <option value="$PROJECT_DIR$/hexagon-api/pom.xml" />
         <option value="$PROJECT_DIR$/hexagon-core/pom.xml" />
+        <option value="$PROJECT_DIR$/hexagon-shared/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" project-jdk-name="zulu-17" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="zulu-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ProjectType">

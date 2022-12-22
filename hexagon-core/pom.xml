@@ -16,7 +16,6 @@
     <properties>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <kotlin.version>1.8.0-RC2</kotlin.version>
     </properties>
 
     <dependencies>
