@@ -57,5 +57,17 @@
         WHERE id = #{id}
     </delete>
 
+    <resultMap id="accountResultMap" type="Account">
+        <constructor>
+            <arg column="email" javaType="java.lang.String"/>
+            <arg column="password" javaType="java.lang.String"/>
+        </constructor>
+
+        <result property="id" column="id"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+        <result property="version" column="version"/>
+    </resultMap>
+
 
 </mapper>

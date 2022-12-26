@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="refactor">
+    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="setup mybatis and connect to postgres successful">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/MainController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/MainController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/persistence/plugin/TimestampPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/persistence/plugin/TimestampPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/repository/AccountRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/repository/AccountRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/repository/BaseRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/repository/BaseRepositoryImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/resources/mybatis/account-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/mybatis/account-mapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/resources/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-domain/src/main/java/com/vudang/kotlin/hexagon/domain/entity/BaseEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-domain/src/main/java/com/vudang/kotlin/hexagon/domain/entity/BaseEntity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671708103886</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="setup mybatis and connect to postgres successful">
+      <created>1672032514357</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672032514357</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,7 +177,8 @@
     <MESSAGE value="configure mybatis and flyway for core layer" />
     <MESSAGE value="data layer" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="setup mybatis and connect to postgres successful" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup mybatis and connect to postgres successful" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
