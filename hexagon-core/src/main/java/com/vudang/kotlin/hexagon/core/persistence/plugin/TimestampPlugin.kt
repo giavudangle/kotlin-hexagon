@@ -8,7 +8,9 @@ import org.apache.ibatis.mapping.SqlCommandType
 import org.apache.ibatis.plugin.Interceptor
 import org.apache.ibatis.plugin.Intercepts
 import org.apache.ibatis.plugin.Invocation
+import org.apache.ibatis.plugin.Plugin
 import org.apache.ibatis.plugin.Signature
+import java.util.*
 
 @Intercepts(
   Signature(
@@ -25,17 +27,24 @@ class TimestampPlugin : Interceptor {
     when (statement.sqlCommandType) {
       SqlCommandType.INSERT -> {
         if (params is BaseEntity) {
-          params.createdAt = Instant.now()
-          params.updatedAt = Instant.now()
+          params.createdAt = Instant.now().toEpochMilli()
+          params.updatedAt = Instant.now().toEpochMilli()
         }
       }
       SqlCommandType.UPDATE -> {
         if (params is BaseEntity) {
-          params.updatedAt = Instant.now()
+          params.updatedAt = Instant.now().toEpochMilli()
         }
       }
       else -> {}
     }
     return invocation.proceed()
+  }
+
+  override fun plugin(target: Any?): Any {
+    return Plugin.wrap(target,this)
+  }
+
+  override fun setProperties(properties: Properties?) {
   }
 }

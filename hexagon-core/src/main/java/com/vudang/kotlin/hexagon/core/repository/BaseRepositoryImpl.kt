@@ -13,12 +13,12 @@ abstract class BaseRepositoryImpl<E : BaseEntity, M : BaseMapper<E>>(protected o
   @Throws(OptimisticConcurrentException::class)
   override fun persist(entity: E) {
     if (entity.id == 0L) {
-      entity.createdAt = Instant.now()
-      entity.updatedAt = Instant.now()
+      entity.createdAt = Instant.now().toEpochMilli()
+      entity.updatedAt = Instant.now().toEpochMilli()
 
       mapper.insert(entity)
     } else {
-      entity.updatedAt = Instant.now()
+      entity.updatedAt = Instant.now().toEpochMilli()
 
       val changed = mapper.update(entity)
       if (changed < 1) {

@@ -4,8 +4,8 @@ import java.time.Instant
 
 abstract class BaseEntity {
   var id: Long = 0
-  var updatedAt: Instant = Instant.now()
-  var createdAt: Instant = Instant.now()
+  var createdAt: Long = Instant.now().toEpochMilli()
+  var updatedAt: Long = Instant.now().toEpochMilli()
   protected var version = 0
   private var events = mutableListOf<Any>()
 

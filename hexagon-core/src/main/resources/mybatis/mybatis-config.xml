@@ -3,5 +3,20 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <settings>
+        <setting name="lazyLoadingEnabled" value="false"/>
+    </settings>
+
+    <typeAliases>
+
+    </typeAliases>
+
+    <typeHandlers>
+
+    </typeHandlers>
+
+    <mappers>
+        <mapper resource="mybatis/account-mapper.xml"/>
+    </mappers>
 
 </configuration>

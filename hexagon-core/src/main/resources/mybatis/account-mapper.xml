@@ -4,8 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.vudang.kotlin.hexagon.core.persistence.mapper.AccountMapper">
     <sql id="tableName">account</sql>
-    <sql id="allColumnList">
-        id,
+    <sql id="baseColumnList">
         email,
         password,
         created_at,
@@ -13,21 +12,24 @@
         version
     </sql>
 
+    <sql id="allColumnList">
+        id,
+        <include refid="baseColumnList"/>
+    </sql>
+
     <insert
         id="insert" parameterType="com.vudang.kotlin.hexagon.domain.entity.Account"
         keyColumn="id"
         keyProperty="id"
         useGeneratedKeys="true">
-        INSERT INTO
-        <include refid="tableName"/>
-        (<include refid="allColumnList"/>)
+        INSERT INTO <include refid="tableName"/>
+        (<include refid="baseColumnList"/>)
         VALUES (
-            #{id},
             #{email},
             #{password},
-            #={created_at},
-            #={updated_at},
-            #={version}
+            #{createdAt},
+            #{updatedAt},
+            #{version}
         )
     </insert>
 
