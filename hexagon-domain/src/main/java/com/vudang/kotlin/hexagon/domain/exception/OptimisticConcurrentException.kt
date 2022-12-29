@@ -1,6 +1,5 @@
 package com.vudang.kotlin.hexagon.domain.exception
 
-
 class OptimisticConcurrentException(reason: String?) : BaseDomainException(REASON, CODE) {
   constructor() : this(REASON) {}
 

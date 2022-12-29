@@ -24,6 +24,22 @@
             <artifactId>hexagon-domain</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.vudang.kotlin.hexagon</groupId>
+            <artifactId>hexagon-adapter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.vudang.kotlin.hexagon</groupId>
+            <artifactId>hexagon-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.vudang.kotlin.hexagon</groupId>
+            <artifactId>hexagon-external</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.vudang.kotlin.hexagon</groupId>
+            <artifactId>hexagon-shared</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
@@ -38,6 +54,10 @@
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.axonframework</groupId>
+            <artifactId>axon-spring-boot-starter</artifactId>
         </dependency>
 
 

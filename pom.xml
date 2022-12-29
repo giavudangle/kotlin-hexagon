@@ -19,6 +19,8 @@
         <module>hexagon-adapter</module>
         <module>hexagon-core</module>
         <module>hexagon-api</module>
+        <module>hexagon-shared</module>
+        <module>hexagon-external</module>
     </modules>
 
     <properties>
@@ -33,6 +35,7 @@
         <lombok.version>1.18.24</lombok.version>
         <flyway.version>9.5.1</flyway.version>
         <rider.version>1.32.3</rider.version>
+        <axon.version>4.6.2</axon.version>
     </properties>
 
     <dependencyManagement>
@@ -107,20 +110,21 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-core</artifactId>
                 <version>${flyway.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>com.github.database-rider</groupId>
                 <artifactId>rider-spring</artifactId>
                 <version>${rider.version}</version>
             </dependency>
-
-
+            <dependency>
+                <groupId>org.axonframework</groupId>
+                <artifactId>axon-spring-boot-starter</artifactId>
+                <version>${axon.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

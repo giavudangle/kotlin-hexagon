@@ -1,12 +1,10 @@
-CREATE TABLE IF NOT EXISTS `ACCOUNT`(
-  `id` AUTO_INCREMENT BIGINT(20) NOT NULL,
-  `email` VARCHAR(100) NOT NULL,
-  `password` VARCHAR(100) NOT NULL,
-  `createdAt` BIGINT(20) NOT NULL,
-  `updatedAt` BIGINT(20) NOT NULL,
-  `version` INT(10) NOT NULL,
-   PRIMARY KEY(`id`)
+CREATE TABLE IF NOT EXISTS account (
+ id    SERIAL,
+ name   VARCHAR(100) NOT NULL,
+ email   VARCHAR(100) NOT NULL,
+ password   VARCHAR(100) NOT NULL,
+ created_at BIGINT NOT NULL,
+ updated_at BIGINT NOT NULL,
+ version INT NOT NULL,
+ PRIMARY KEY (id)
 );
-
-INSERT INTO `ACCOUNT`
-VALUES(1,'account@gmail.com','password',1671086608000,1671086608000,0);

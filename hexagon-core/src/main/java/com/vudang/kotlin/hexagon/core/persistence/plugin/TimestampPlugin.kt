@@ -2,6 +2,7 @@ package com.vudang.kotlin.hexagon.core.persistence.plugin
 
 import com.vudang.kotlin.hexagon.domain.entity.BaseEntity
 import java.time.Instant
+import java.util.*
 import org.apache.ibatis.executor.Executor
 import org.apache.ibatis.mapping.MappedStatement
 import org.apache.ibatis.mapping.SqlCommandType
@@ -10,7 +11,6 @@ import org.apache.ibatis.plugin.Intercepts
 import org.apache.ibatis.plugin.Invocation
 import org.apache.ibatis.plugin.Plugin
 import org.apache.ibatis.plugin.Signature
-import java.util.*
 
 @Intercepts(
   Signature(
@@ -42,9 +42,8 @@ class TimestampPlugin : Interceptor {
   }
 
   override fun plugin(target: Any?): Any {
-    return Plugin.wrap(target,this)
+    return Plugin.wrap(target, this)
   }
 
-  override fun setProperties(properties: Properties?) {
-  }
+  override fun setProperties(properties: Properties?) {}
 }

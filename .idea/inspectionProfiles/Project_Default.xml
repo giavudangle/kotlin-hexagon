@@ -6,6 +6,7 @@
         <list>
           <option value="org.jetbrains.kotlin:kotlin-stdlib-jdk8" />
           <option value="org.jetbrains.kotlin:kotlin-test-junit5" />
+          <option value="org.jetbrains.kotlin:kotlin-test" />
         </list>
       </option>
     </inspection_tool>

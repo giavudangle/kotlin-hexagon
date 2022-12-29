@@ -16,3 +16,10 @@ docker run -p 80:80 \
 docker ps
 docker inspect [postgres_pid]
 ```
+
+#### Maven commands
+```
+ mvn clean
+ mvn download source
+ mvn dependency:resolve
+```
