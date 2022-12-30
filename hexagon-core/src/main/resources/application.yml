@@ -16,7 +16,8 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
-
+  banner:
+    location: banner.txt
 
   flyway:
     enabled: true

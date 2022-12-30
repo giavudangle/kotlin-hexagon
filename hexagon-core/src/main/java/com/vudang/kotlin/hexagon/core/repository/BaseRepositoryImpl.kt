@@ -1,12 +1,10 @@
 package com.vudang.kotlin.hexagon.core.repository
 
-import com.vudang.kotlin.hexagon.api.dto.AccountDTO
 import com.vudang.kotlin.hexagon.core.persistence.mapper.BaseMapper
 import com.vudang.kotlin.hexagon.domain.entity.BaseEntity
 import com.vudang.kotlin.hexagon.domain.exception.OptimisticConcurrentException
 import com.vudang.kotlin.hexagon.domain.repository.BaseRepository
 import java.time.Instant
-import java.util.*
 
 abstract class BaseRepositoryImpl<E : BaseEntity, M : BaseMapper<E>>(protected open val mapper: M) :
   BaseRepository<E> {
@@ -33,7 +31,7 @@ abstract class BaseRepositoryImpl<E : BaseEntity, M : BaseMapper<E>>(protected o
     return mapper.findByIds(ids)
   }
 
-  override fun find(id: Long): E {
+  override fun find(id: Long): E? {
     return mapper.find(id)
   }
 

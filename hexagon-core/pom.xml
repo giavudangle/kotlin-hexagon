@@ -33,10 +33,6 @@
         </dependency>
         <dependency>
             <groupId>com.vudang.kotlin.hexagon</groupId>
-            <artifactId>hexagon-external</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.vudang.kotlin.hexagon</groupId>
             <artifactId>hexagon-shared</artifactId>
         </dependency>
         <dependency>

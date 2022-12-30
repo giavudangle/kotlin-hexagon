@@ -125,6 +125,16 @@
                 <artifactId>axon-spring-boot-starter</artifactId>
                 <version>${axon.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.axonframework</groupId>
+                <artifactId>axon-messaging</artifactId>
+                <version>${axon.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.axonframework</groupId>
+                <artifactId>axon-spring</artifactId>
+                <version>${axon.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

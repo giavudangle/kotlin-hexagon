@@ -8,7 +8,7 @@ interface BaseRepository<T : BaseEntity?> {
 
   fun findByIds(ids: List<Long>): List<T>
 
-  fun find(id: Long): T
+  fun find(id: Long): T?
 
   fun delete(id: Long)
 }
