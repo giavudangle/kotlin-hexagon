@@ -1,7 +1,17 @@
-#### Layer Structure
+#### Architecture
+<img src="./docs/diagram/1. Architecture.png"/>    
+<img src="./docs/diagram/2. Layers.webp"/>
+
+### Core processor
+<img src="./docs/diagram/3. UML.png"/>    
+
+### Request journey
+``` 
+HTTP -> Controller -> API -> Service Interface -> Adapter -> Core
+Infrastructure -> Adapter -> Core -> Response
 ```
-API -> Core -> Adapter -> Domain
-```
+<img src="./docs/diagram/4. Dependencies.png"/>    
+
 
 #### Container
 ```shell

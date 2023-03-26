@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="build codebase for kotlin-hexagon">
-      <change afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AxonConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AxonGlobalRollbackConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/const/AdapterConst.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="build code base for clean hexagon architecture project">
+      <change afterPath="$PROJECT_DIR$/docs/diagram/1. Architecture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/diagram/2. Layers.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/diagram/3. UML.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/diagram/4. Dependencies.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-adapter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AdapterConst.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/HexagonCommandGateway.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/gateway/HexagonCommandGateway.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/HexagonQueryGateway.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/gateway/HexagonQueryGateway.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/service/AccountServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/service/AccountServiceImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,10 +80,11 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.language.Kotlin" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/diagram" />
       <recent name="$PROJECT_DIR$/kotlin-hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core" />
       <recent name="$PROJECT_DIR$/kotlin-hexagon-core/src/main/java" />
     </key>
@@ -209,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672295889481</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="build code base for clean hexagon architecture project">
+      <created>1679793962676</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1679793962676</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,7 +233,8 @@
     <MESSAGE value="setup mybatis and connect to postgres successful" />
     <MESSAGE value="update mybatis config" />
     <MESSAGE value="implement adapter, api, external layers" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement adapter, api, external layers" />
+    <MESSAGE value="build code base for clean hexagon architecture project" />
+    <option name="LAST_COMMIT_MESSAGE" value="build code base for clean hexagon architecture project" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
