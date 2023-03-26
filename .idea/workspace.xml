@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="build code base for clean hexagon architecture project">
-      <change afterPath="$PROJECT_DIR$/docs/diagram/1. Architecture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/diagram/2. Layers.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/diagram/3. UML.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/diagram/4. Dependencies.png" afterDir="false" />
+    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="update readme">
+      <change afterPath="$PROJECT_DIR$/deployment/docker/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AxonCommandBusGateway.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AxonQueryBusGateway.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AxonConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AxonConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AxonGlobalRollbackConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AxonGlobalRollbackConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/const/AdapterConst.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/const/AdapterConst.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/gateway/HexagonCommandGateway.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/gateway/HexagonCommandGateway.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/gateway/HexagonQueryGateway.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/gateway/HexagonQueryGateway.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/Application.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/port/controller/AccountController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/port/controller/AccountController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/port/controller/MainController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/port/controller/MainController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/service/AccountServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/java/com/vudang/kotlin/hexagon/core/service/AccountServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-core/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-core/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,10 +88,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="outdated.bundled.kotlin.compiler" value="213-1.6.10-release-944-IJ6461.79" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.24022877" />
+    <property name="settings.editor.selected.configurable" value="preferences.language.Kotlin" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -209,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679793962676</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update readme">
+      <created>1679797133251</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679797133251</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,7 +252,8 @@
     <MESSAGE value="update mybatis config" />
     <MESSAGE value="implement adapter, api, external layers" />
     <MESSAGE value="build code base for clean hexagon architecture project" />
-    <option name="LAST_COMMIT_MESSAGE" value="build code base for clean hexagon architecture project" />
+    <MESSAGE value="update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="update readme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

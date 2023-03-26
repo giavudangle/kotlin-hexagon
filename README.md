@@ -15,15 +15,11 @@ Infrastructure -> Adapter -> Core -> Response
 
 #### Container
 ```shell
-docker pull postgres:latest
-docker run -d -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin --name db-my -p 5432:5432  --restart=always postgres
-docker pull dpage/pgadmin4
-docker run -p 80:80 \
-    -e 'PGADMIN_DEFAULT_EMAIL=admin@admin.com' \
-    -e 'PGADMIN_DEFAULT_PASSWORD=admin' \
-    -d dpage/pgadmin4
+cd ./deployment/docker
+run docker compose up
 docker ps
-docker inspect [postgres_pid]
+docker inspect [postgres_port] | grep 'IPAddress'
+run pgadmin
 ```
 
 #### Maven commands

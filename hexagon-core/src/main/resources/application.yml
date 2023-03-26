@@ -5,9 +5,9 @@ spring:
 #    url: jdbc:h2:mem:public;MODE=MYSQL;DB_CLOSE_DELAY=-1;INIT=CREATE SCHEMA IF NOT EXISTS PUBLIC
 #    username: sa
 #    password: sa
-    url: jdbc:postgresql://localhost:5432/kotlin-hexagon
-    username: admin
-    password: admin
+    url: jdbc:postgresql://localhost:5432/hexagon_db
+    username: root
+    password: root
   jpa:
     properties:
       hibernate:
