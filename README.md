@@ -18,7 +18,7 @@ docker inspect [postgres_pid]
 
 #### Maven commands
 ```
- mvn clean
+ mvn cleanœ
  mvn download source
  mvn dependency:resolve
 ```

@@ -35,7 +35,7 @@
         <lombok.version>1.18.24</lombok.version>
         <flyway.version>9.5.1</flyway.version>
         <rider.version>1.32.3</rider.version>
-        <axon.version>4.6.2</axon.version>
+        <axon.version>4.7.3</axon.version>
     </properties>
 
     <dependencyManagement>
@@ -124,6 +124,16 @@
                 <groupId>org.axonframework</groupId>
                 <artifactId>axon-spring-boot-starter</artifactId>
                 <version>${axon.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.axonframework</groupId>
+                        <artifactId>axon-server-connector</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.thoughworks.xstream</groupId>
+                        <artifactId>xstream</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.axonframework</groupId>

@@ -1,22 +1,26 @@
 package com.vudang.kotlin.hexagon.core.service
 
-import com.vudang.kotlin.hexagon.adapter.config.HexagonCommandGateway
-import com.vudang.kotlin.hexagon.adapter.config.HexagonQueryGateway
+import com.vudang.kotlin.hexagon.adapter.gateway.HexagonCommandGateway
+import com.vudang.kotlin.hexagon.adapter.gateway.HexagonQueryGateway
 import com.vudang.kotlin.hexagon.adapter.dto.AccountDTO
 import com.vudang.kotlin.hexagon.adapter.query.AccountInformationQuery
 import com.vudang.kotlin.hexagon.api.dto.AccountDTOResponse
 import com.vudang.kotlin.hexagon.api.service.AccountService
 import com.vudang.kotlin.hexagon.core.context.getContext
+import lombok.RequiredArgsConstructor
+import org.axonframework.commandhandling.gateway.CommandGateway
+import org.axonframework.queryhandling.QueryGateway
 import org.springframework.stereotype.Component
 
 @Component
+@RequiredArgsConstructor
 class AccountServiceImpl(
-  private val commandGateway: HexagonCommandGateway,
-  private val queryGateway: HexagonQueryGateway
+  private val queryGateway: QueryGateway,
+  private val commandGateway: CommandGateway
 ) : AccountService {
   override fun findById(id: Long): AccountDTOResponse {
     val accountDTO =
-      queryGateway.query(getContext(), AccountInformationQuery(id), AccountDTO::class.java).get()
+      queryGateway.query( AccountInformationQuery(id), AccountDTO::class.java).get()
     return AccountDTOResponse(
       id = accountDTO.account.id,
       name = accountDTO.account.name,
