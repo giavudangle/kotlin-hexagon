@@ -1,3 +1,5 @@
 package com.vudang.kotlin.hexagon.adapter.command
 
-class CreateAccountCommand
+class CreateAccountCommand : BaseCommand() {
+    
+}

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController
 class AccountController(private val accountService: AccountService) {
   private object Constants {
     const val ROOT = "/account"
+    const val FIND = "$ROOT/{id}"
   }
 
   @GetMapping(Constants.ROOT)
@@ -19,7 +20,7 @@ class AccountController(private val accountService: AccountService) {
     return accountService.seeding()
   }
 
-  @GetMapping(Constants.ROOT.plus("{id}"))
+  @GetMapping(Constants.FIND)
   @ResponseBody
   fun find(@PathVariable id: Long): AccountDTOResponse {
     return accountService.findById(id)

@@ -16,16 +16,22 @@ class AccountServiceImpl(
   private val commandGateway: CommandGateway
 ) : AccountService {
   override fun findById(id: Long): AccountDTOResponse {
-    val accountDTO = queryGateway.query(AccountInformationQuery(id), AccountDTO::class.java).get()
+//    val accountDTO = queryGateway.query(AccountInformationQuery(id), AccountDTO::class.java).get()
+//    return AccountDTOResponse(
+//      id = accountDTO.account.id,
+//      name = accountDTO.account.name,
+//      email = accountDTO.account.email,
+//      password = null
+//    )
     return AccountDTOResponse(
-      id = accountDTO.account.id,
-      name = accountDTO.account.name,
-      email = accountDTO.account.email,
-      password = null
+      1L,
+      "Test",
+      "test@test.com",
+      "test"
     )
   }
 
   override fun seeding(): String {
-    return "OK"
+    return commandGateway.send<>()
   }
 }
