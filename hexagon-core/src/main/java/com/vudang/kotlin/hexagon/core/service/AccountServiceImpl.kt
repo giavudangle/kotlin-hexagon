@@ -32,6 +32,6 @@ class AccountServiceImpl(
   }
 
   override fun seeding(): String {
-    return commandGateway.send<>()
+    return "ok"
   }
 }
