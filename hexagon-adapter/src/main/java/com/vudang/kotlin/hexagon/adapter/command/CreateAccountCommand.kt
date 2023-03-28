@@ -1,5 +1,4 @@
 package com.vudang.kotlin.hexagon.adapter.command
 
-class CreateAccountCommand : BaseCommand() {
-    
-}
+class CreateAccountCommand(val name: String, val email: String, val password: String) :
+  BaseCommand() {}

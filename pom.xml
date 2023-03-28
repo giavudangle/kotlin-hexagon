@@ -35,7 +35,7 @@
         <lombok.version>1.18.24</lombok.version>
         <flyway.version>9.5.1</flyway.version>
         <rider.version>1.32.3</rider.version>
-        <axon.version>4.7.3</axon.version>
+        <axon.version>4.7.0</axon.version>
     </properties>
 
     <dependencyManagement>

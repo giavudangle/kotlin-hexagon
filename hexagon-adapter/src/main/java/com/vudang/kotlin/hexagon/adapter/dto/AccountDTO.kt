@@ -2,4 +2,10 @@ package com.vudang.kotlin.hexagon.adapter.dto
 
 import com.vudang.kotlin.hexagon.domain.entity.Account
 
-data class AccountDTO(var account: Account)
+data class AccountDTO(val id: Long, val name: String, val email: String) {
+  companion object {
+    fun fromAccount(account: Account): AccountDTO {
+      return AccountDTO(id = account.id, name = account.name, email = account.email)
+    }
+  }
+}

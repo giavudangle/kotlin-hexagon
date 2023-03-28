@@ -9,4 +9,8 @@ import org.springframework.stereotype.Component
 @Component
 @Getter
 class AccountRepositoryImpl(override val mapper: AccountMapper) :
-  BaseRepositoryImpl<Account, AccountMapper>(mapper), AccountRepository {}
+  BaseRepositoryImpl<Account, AccountMapper>(mapper), AccountRepository {
+  override fun findByEmail(email: String): Account {
+    return mapper.findByEmail(email)
+  }
+}

@@ -26,4 +26,5 @@ class HexagonQueryGateway(private val queryBusGateway: AxonQueryBusGateway) {
   fun <R, Q> query(context: HexagonContext, query: Q, classType: Class<R>): CompletableFuture<R> {
     return this.query(context, query, classType)
   }
+
 }

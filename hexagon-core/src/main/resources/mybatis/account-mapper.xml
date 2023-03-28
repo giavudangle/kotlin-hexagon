@@ -47,6 +47,12 @@
         </foreach>
     </select>
 
+    <select id="findByEmail">
+        SELECT <include refid="allColumnList"/>
+        FROM <include refid="tableName"/>
+        WHERE email = #{email}
+    </select>
+
     <select id="find" resultMap="accountResultMap">
         SELECT <include refid="allColumnList"/>
         FROM <include refid="tableName"/>

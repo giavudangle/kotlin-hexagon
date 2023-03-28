@@ -13,6 +13,6 @@ class AccountInformationHandler(private val accountRepository: AccountRepository
   @QueryHandler
   fun handle(query: AccountInformationQuery): AccountDTO {
     val account = accountRepository.find(query.id) ?: throw EntityNotFoundException()
-    return AccountDTO(account)
+    return AccountDTO(id = account.id, name = account.name, email = account.email)
   }
 }
