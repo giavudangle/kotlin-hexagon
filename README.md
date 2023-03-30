@@ -28,3 +28,9 @@ run pgadmin
  mvn download source
  mvn dependency:resolve
 ```
+
+#### OpenAPI and Swagger
+```text
+OpenAPI: http://localhost:8080/v3/api-docs
+Swagger: http://localhost:8080/swagger-ui/index.html
+```

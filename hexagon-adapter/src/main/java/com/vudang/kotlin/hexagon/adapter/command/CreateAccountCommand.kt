@@ -1,4 +1,9 @@
 package com.vudang.kotlin.hexagon.adapter.command
 
-class CreateAccountCommand(val name: String, val email: String, val password: String) :
-  BaseCommand() {}
+import org.axonframework.modelling.command.TargetAggregateIdentifier
+
+class CreateAccountCommand(
+  @TargetAggregateIdentifier val email: String,
+  val name: String,
+  val password: String
+) : BaseCommand() {}
