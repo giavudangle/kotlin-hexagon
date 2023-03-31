@@ -18,7 +18,7 @@
     <modules>
         <module>hexagon-domain</module>
         <module>hexagon-adapter</module>
-        <module>hexagon-core</module>
+        <module>hexagon-infrastructure</module>
         <module>hexagon-api</module>
         <module>hexagon-shared</module>
         <module>hexagon-external</module>
@@ -109,7 +109,7 @@
             </dependency>
             <dependency>
                 <groupId>com.vudang.kotlin.hexagon</groupId>
-                <artifactId>hexagon-core</artifactId>
+                <artifactId>hexagon-infrastructure</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

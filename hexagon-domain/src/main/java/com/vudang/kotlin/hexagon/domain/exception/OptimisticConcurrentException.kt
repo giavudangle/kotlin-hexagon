@@ -5,6 +5,6 @@ class OptimisticConcurrentException(reason: String?) : BaseDomainException(REASO
 
   companion object {
     private const val CODE = "EX.001.OPTIMISTIC_CONCURRENT_EXCEPTION"
-    private const val REASON = "Optimistic concurrent exception occur, please retry later."
+    private const val REASON = "Optimistic concurrent exception occur, please retry later..."
   }
 }

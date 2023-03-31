@@ -10,8 +10,8 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>hexagon-core</artifactId>
-    <name>hexagon-core</name>
+    <artifactId>hexagon-infrastructure</artifactId>
+    <name>hexagon-infrastructure</name>
 
     <properties>
         <maven.compiler.source>${java.version}</maven.compiler.source>

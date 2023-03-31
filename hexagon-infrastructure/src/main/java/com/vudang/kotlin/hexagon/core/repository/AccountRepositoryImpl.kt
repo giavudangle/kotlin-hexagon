@@ -4,9 +4,9 @@ import com.vudang.kotlin.hexagon.core.persistence.mapper.AccountMapper
 import com.vudang.kotlin.hexagon.domain.entity.Account
 import com.vudang.kotlin.hexagon.domain.repository.AccountRepository
 import lombok.Getter
-import org.springframework.stereotype.Component
+import org.springframework.stereotype.Repository
 
-@Component
+@Repository
 @Getter
 class AccountRepositoryImpl(override val mapper: AccountMapper) :
   BaseRepositoryImpl<Account, AccountMapper>(mapper), AccountRepository {

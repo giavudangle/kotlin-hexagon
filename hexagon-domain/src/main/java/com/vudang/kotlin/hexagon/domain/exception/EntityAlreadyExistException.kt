@@ -6,6 +6,6 @@ class EntityAlreadyExistException(message: String?, code: String) :
 
   companion object {
     private const val CODE = "EX.003.ENTITY_ALREADY_EXIST_EXCEPTION"
-    private const val MESSAGE = "Exception occurs: Entity already exist"
+    private const val MESSAGE = "Exception occurs: entity already exist"
   }
 }

@@ -13,8 +13,9 @@ import org.axonframework.commandhandling.gateway.CommandGateway
 import org.axonframework.eventsourcing.eventstore.EventStore
 import org.axonframework.queryhandling.QueryGateway
 import org.springframework.stereotype.Component
+import org.springframework.stereotype.Service
 
-@Component
+@Service
 @RequiredArgsConstructor
 class AccountServiceImpl(
   private val queryGateway: QueryGateway,
