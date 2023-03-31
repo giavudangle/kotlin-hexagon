@@ -11,7 +11,6 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>hexagon-infrastructure</artifactId>
-    <name>hexagon-infrastructure</name>
 
     <properties>
         <maven.compiler.source>${java.version}</maven.compiler.source>
@@ -140,7 +139,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.vudang.kotlin.hexagon.core.Application</mainClass>
+                    <mainClass>com.vudang.kotlin.hexagon.infrastructure.Application</mainClass>
                 </configuration>
             </plugin>
         </plugins>
