@@ -1,0 +1,43 @@
+spring:
+  application: kotlin-hexagon
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hexagon_db
+    username: root
+    password: root
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  banner:
+    location: banner.txt
+
+  flyway:
+    enabled: true
+    locations: classpath/migrations
+    schemas: PUBLIC
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+
+javax:
+  persistence:
+    schema-generation:
+      database:
+        action: drop-and-create
+
+axon:
+  serializer:
+    general: jackson

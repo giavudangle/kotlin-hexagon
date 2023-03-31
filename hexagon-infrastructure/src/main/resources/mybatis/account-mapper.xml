@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vudang.kotlin.hexagon.core.persistence.mapper.AccountMapper">
+    <sql id="tableName">account</sql>
+    <sql id="baseColumnList">
+        name,
+        email,
+        password,
+        created_at,
+        updated_at,
+        version
+    </sql>
+
+    <sql id="allColumnList">
+        id,
+        <include refid="baseColumnList"/>
+    </sql>
+
+    <insert
+            id="insert" parameterType="com.vudang.kotlin.hexagon.domain.entity.Account"
+            keyColumn="id"
+            keyProperty="id"
+            useGeneratedKeys="true">
+        INSERT INTO <include refid="tableName"/>
+        (<include refid="baseColumnList"/>)
+        VALUES (
+        #{name},
+        #{email},
+        #{password},
+        #{createdAt},
+        #{updatedAt},
+        #{version}
+        )
+    </insert>
+
+    <update id="update" parameterType="com.vudang.kotlin.hexagon.domain.entity.Account">
+    </update>
+
+    <select id="findByIds">
+        SELECT <include refid="allColumnList"/>
+        FROM <include refid="tableName"/>
+        WHERE id IN
+        <foreach collection="ids" item="id" index="index" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+
+    <select id="findByEmail">
+        SELECT <include refid="allColumnList"/>
+        FROM <include refid="tableName"/>
+        WHERE email = #{email}
+    </select>
+
+    <select id="find" resultMap="accountResultMap">
+        SELECT <include refid="allColumnList"/>
+        FROM <include refid="tableName"/>
+        WHERE id = #{id}
+    </select>
+
+
+    <delete id="delete">
+        DELETE FROM <include refid="tableName"/>
+        WHERE id = #{id}
+    </delete>
+
+    <resultMap id="accountResultMap" type="Account">
+        <constructor>
+            <arg column="name" javaType="java.lang.String"/>
+            <arg column="email" javaType="java.lang.String"/>
+            <arg column="password" javaType="java.lang.String"/>
+        </constructor>
+
+        <result property="id" column="id"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+        <result property="version" column="version"/>
+    </resultMap>
+
+
+</mapper>

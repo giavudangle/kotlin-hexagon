@@ -22,7 +22,6 @@
         <module>hexagon-api</module>
         <module>hexagon-shared</module>
         <module>hexagon-external</module>
-        <module>hexagon-infrastructure</module>
     </modules>
 
     <properties>
