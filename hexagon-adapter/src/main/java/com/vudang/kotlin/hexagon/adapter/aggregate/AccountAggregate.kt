@@ -13,32 +13,33 @@ import org.axonframework.modelling.command.AggregateIdentifier
 import org.axonframework.modelling.command.AggregateLifecycle
 import org.axonframework.spring.stereotype.Aggregate
 import org.springframework.stereotype.Component
+import java.util.*
 
 @Component
 @Aggregate
 class AccountAggregate(private val accountRepository: AccountRepository) : BaseAggregate() {
-  @AggregateIdentifier private var email: String = ""
+  @AggregateIdentifier
+  private var accountId : UUID =  UUID.randomUUID()
+  private var email: String = ""
   private var name: String = ""
   private var password: String = ""
 
   @CommandHandler
   fun handle(command: CreateAccountCommand) {
     AggregateLifecycle.apply(
-      AccountCreatedEvent(email = command.email, name = command.name, password = command.password)
+      AccountCreatedEvent(accountId = command.accountId,  email = command.email, name = command.name, password = command.password)
     )
   }
 
   @EventHandler
-  fun on(event: AccountCreatedEvent): AccountDTO {
+  fun on(event: AccountCreatedEvent){
     this.accountRepository.findByEmail(event.email) ?: throw EntityAlreadyExistException()
-    val account = Account(name = event.name, email = event.email, password = event.password)
-
-    this.accountRepository.persist(account)
-    return AccountDTO.fromAccount(account)
+    this.accountRepository.persist(Account(name = event.name, email = event.email, password = event.password))
   }
 
   @EventSourcingHandler
   fun store(event: AccountCreatedEvent) {
+    this.accountId = event.accountId
     this.email = event.email
     this.name = event.name
     this.password = event.password

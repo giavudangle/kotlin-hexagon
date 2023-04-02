@@ -1,3 +1,5 @@
 package com.vudang.kotlin.hexagon.adapter.event
 
-class AccountCreatedEvent(val email: String, val name: String, val password: String) {}
+import java.util.*
+
+class AccountCreatedEvent(val accountId : UUID,val email: String, val name: String, val password: String) {}

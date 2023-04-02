@@ -1,5 +1,6 @@
 package com.vudang.kotlin.hexagon.infrastructure.service
 
+import com.vudang.kotlin.hexagon.adapter.command.CreateAccountCommand
 import com.vudang.kotlin.hexagon.adapter.dto.AccountDTO
 import com.vudang.kotlin.hexagon.adapter.query.AccountInformationQuery
 import com.vudang.kotlin.hexagon.api.request.CreateAccountRequest
@@ -12,6 +13,7 @@ import org.axonframework.commandhandling.gateway.CommandGateway
 import org.axonframework.eventsourcing.eventstore.EventStore
 import org.axonframework.queryhandling.QueryGateway
 import org.springframework.stereotype.Service
+import java.util.*
 
 @Service
 @RequiredArgsConstructor
@@ -30,21 +32,16 @@ class AccountServiceImpl(
     )
   }
 
-  override fun create(request: CreateAccountRequest): BaseResponse<AccountResponse> {
+  override fun create(request: CreateAccountRequest): BaseResponse<Boolean> {
+          commandGateway.sendAndWait<Any>(
+            CreateAccountCommand(
+              accountId = UUID.randomUUID(),
+              email = request.email,
+              password = request.password,
+              name = request.name
+            ))
 
-    //    val account: AccountDTO =
-    //      commandGateway.sendAndWait(
-    //        CreateAccountCommand(
-    //          email = request.email,
-    //          password = request.password,
-    //          name = request.name
-    //        )
-    //      )
-    //
-    //    return BaseResponse.success(
-    //      AccountResponse(id = account.id, name = account.name, email = account.email)
-    //    )
-    return BaseResponse.success(AccountResponse(0L, "", ""))
+    return BaseResponse.success(true)
   }
 
   override fun getEventsByAccountId(accountId: Long): List<Any?> {

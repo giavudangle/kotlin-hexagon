@@ -5,28 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="refactor module">
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/Application.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/context/HexagonContextHolder.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/persistence/config/MyBatisConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/persistence/mapper/AccountMapper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/persistence/mapper/BaseMapper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/persistence/plugin/TimestampPlugin.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/port/config/RouteConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/port/controller/AccountController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/port/controller/MainController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/repository/AccountRepositoryImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/repository/BaseRepositoryImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/service/AccountServiceImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/util/Serializer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/migration/v1___base.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/mybatis/account-mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/config/SwaggerConfiguration.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deployment/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deployment/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/aggregate/AccountAggregate.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/aggregate/AccountAggregate.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/command/CreateAccountCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/command/CreateAccountCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AxonCommandBusGateway.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AxonConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AxonConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AxonGlobalRollbackConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AxonGlobalRollbackConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/config/AxonQueryBusGateway.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/event/AccountCreatedEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/event/AccountCreatedEvent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/gateway/HexagonCommandGateway.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/java/com/vudang/kotlin/hexagon/adapter/gateway/HexagonQueryGateway.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-api/src/main/java/com/vudang/kotlin/hexagon/api/service/AccountService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-api/src/main/java/com/vudang/kotlin/hexagon/api/service/AccountService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-domain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-domain/src/main/java/com/vudang/kotlin/hexagon/domain/context/HexagonContext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-domain/src/main/java/com/vudang/kotlin/hexagon/domain/context/HexagonContext.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/Application.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/port/controller/AccountController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/port/controller/AccountController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/service/AccountServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/service/AccountServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/util/Serializer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com/vudang/kotlin/hexagon/infrastructure/util/Serializer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/mybatis/account-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/mybatis/account-mapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +54,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.m2/vudang/org/axonframework/axon-spring-boot-autoconfigure/4.6.2/axon-spring-boot-autoconfigure-4.6.2.jar!/org/axonframework/springboot/autoconfig/AxonAutoConfiguration.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -91,16 +94,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "jdk.selected.JAVA_MODULE": "zulu-17",
-    "last_opened_file_path": "/Users/legiavu.dang/Desktop/best-practices/kotlin-hexagon",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.27353343",
-    "settings.editor.selected.configurable": "project.kotlinCompiler"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2721461" />
+    <property name="settings.editor.selected.configurable" value="project.kotlinCompiler" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com.vudang.kotlin.hexagon.infrastructure/persistence/config" />

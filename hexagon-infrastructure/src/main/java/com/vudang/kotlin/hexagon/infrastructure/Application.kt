@@ -1,13 +1,16 @@
 package com.vudang.kotlin.hexagon.infrastructure
 
+import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.context.annotation.ComponentScan
 
-@SpringBootApplication
-@ComponentScan(basePackages = ["com.vudang.kotlin.hexagon"])
-open class Application {}
+@SpringBootApplication(
+  scanBasePackages = ["com.vudang.kotlin.hexagon"]
+)
+open class Application {
+}
 
-fun main(args: Array<String>) {
+fun main(args : Array<String>){
   runApplication<Application>(*args)
 }

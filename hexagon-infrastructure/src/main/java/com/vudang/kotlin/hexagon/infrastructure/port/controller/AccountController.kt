@@ -21,10 +21,7 @@ class AccountController(private val accountService: AccountService) {
 
   @PostMapping(Constants.ROOT)
   @ResponseBody
-  fun createAccount(@RequestBody request: CreateAccountRequest) {
-    //    println(request)
-    //    println(request::class.simpleName)
-    ////    return accountService.create(request)
-    println("In controller")
+  fun createAccount(@RequestBody request: CreateAccountRequest): BaseResponse<Boolean> {
+    return accountService.create(request)
   }
 }

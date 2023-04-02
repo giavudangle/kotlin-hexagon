@@ -9,11 +9,17 @@ spring:
   jpa:
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
         format_sql: true
     show-sql: true
+
     hibernate:
       ddl-auto: update
+      globally_quoted_identifiers: true
+      naming_strategy: org.hibernate.cfg.EJB3NamingStrategy
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
   banner:
     location: banner.txt
@@ -41,3 +47,5 @@ javax:
 axon:
   serializer:
     general: jackson
+  axonserver:
+    servers: localhost:8124

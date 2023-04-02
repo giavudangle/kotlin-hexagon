@@ -13,7 +13,6 @@ import com.vudang.kotlin.hexagon.adapter.exception.SerializingException
 import com.vudang.kotlin.hexagon.adapter.service.Serializer
 import java.text.DateFormat
 import java.time.Instant
-import org.hibernate.type.descriptor.java.InstantJavaType
 import org.springframework.stereotype.Component
 
 @Component
@@ -21,7 +20,7 @@ class Serializer : Serializer {
   companion object {
     fun byJackson(): ObjectMapper {
       return JsonMapper.builder()
-        .addModule(KotlinModule.Builder().build())
+        .addModule(KotlinModule())
         .addModule(JavaTimeModule())
         .enable(MapperFeature.ACCEPT_CASE_INSENSITIVE_ENUMS)
         .enable(DeserializationFeature.USE_BIG_DECIMAL_FOR_FLOATS)
@@ -36,7 +35,6 @@ class Serializer : Serializer {
     fun byGson(): Gson {
       return GsonBuilder()
         .enableComplexMapKeySerialization()
-        .registerTypeAdapter(Instant::class.java, InstantJavaType.INSTANCE)
         .setDateFormat(DateFormat.LONG)
         .create()
     }
