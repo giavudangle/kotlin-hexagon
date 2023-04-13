@@ -1,7 +1,7 @@
 package com.vudang.kotlin.hexagon.api.response
 
-class BaseResponse<T>(
-  private val data: T?,
+data class BaseResponse<T>(
+  private val result: T?,
   private val code: String?,
   private val message: String?
 ) {
@@ -11,6 +11,9 @@ class BaseResponse<T>(
 
   val isFailed: Boolean
     get() = FAILED_STATUS_CODE == code
+
+  val data: T?
+    get() = this.result
 
   companion object {
     const val SUCCEED_STATUS_CODE = "200"
@@ -28,6 +31,10 @@ class BaseResponse<T>(
 
     fun <T> fail(): BaseResponse<T> {
       return BaseResponse(null, FAILED_STATUS_CODE, FAILED_STATUS_MESSAGE)
+    }
+
+    fun <T> ok(): BaseResponse<T> {
+      return BaseResponse(null, SUCCEED_STATUS_CODE, SUCCEED_STATUS_MESSAGE)
     }
   }
 }

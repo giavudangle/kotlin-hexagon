@@ -7,5 +7,4 @@ import com.vudang.kotlin.hexagon.api.response.BaseResponse
 interface AccountService : BaseService {
   fun findById(id: Long): BaseResponse<AccountResponse>
   fun create(request: CreateAccountRequest): BaseResponse<Boolean>
-  fun getEventsByAccountId(accountId: Long): List<Any?>
 }

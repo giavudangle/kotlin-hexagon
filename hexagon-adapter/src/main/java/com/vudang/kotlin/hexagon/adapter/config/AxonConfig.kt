@@ -1,22 +1,26 @@
 package com.vudang.kotlin.hexagon.adapter.config
 
-import org.axonframework.common.jpa.EntityManagerProvider
-import org.axonframework.common.transaction.TransactionManager
-import org.axonframework.eventsourcing.eventstore.EventStore
-import org.axonframework.eventsourcing.eventstore.jpa.JpaEventStorageEngine
+import com.vudang.kotlin.hexagon.adapter.eventbus.EventDispatcher
+import com.vudang.kotlin.hexagon.adapter.eventbus.HexagonEventBus
+import com.vudang.kotlin.hexagon.adapter.eventbus.IntegrationEventPublisherInterface
+import com.vudang.kotlin.hexagon.domain.EventDispatcherInterface
+import javax.sql.DataSource
+import org.axonframework.common.jdbc.ConnectionProvider
+import org.axonframework.common.jdbc.UnitOfWorkAwareConnectionProviderWrapper
+import org.axonframework.eventhandling.EventBus
+import org.axonframework.eventhandling.SimpleEventBus
+import org.axonframework.queryhandling.LoggingQueryInvocationErrorHandler
+import org.axonframework.queryhandling.QueryBus
+import org.axonframework.queryhandling.SimpleQueryBus
 import org.axonframework.serialization.Serializer
 import org.axonframework.serialization.json.JacksonSerializer
-import org.axonframework.serialization.upcasting.event.SingleEventUpcaster
+import org.axonframework.spring.jdbc.SpringDataSourceConnectionProvider
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Primary
-import java.sql.SQLException
-import javax.sql.DataSource
-
 
 @Configuration
-open class AxonConfig {
-
+open class AxonConfig(private val integrationEventPublisher: IntegrationEventPublisherInterface) {
   @Bean
   @Primary
   open fun jacksonSerializer(): Serializer {
@@ -24,22 +28,23 @@ open class AxonConfig {
   }
 
   @Bean
-  @Throws(SQLException::class)
-  open fun eventStorageEngine(
-    eventSerializer: Serializer?,
-    snapshotSerializer: Serializer?,
-    dataSource: DataSource?,
-    upCaster: SingleEventUpcaster?,
-    entityManagerProvider: EntityManagerProvider?,
-    transactionManager: TransactionManager?
-  ): JpaEventStorageEngine? {
-    return JpaEventStorageEngine.builder()
-      .eventSerializer(eventSerializer)
-      .snapshotSerializer(snapshotSerializer)
-      .dataSource(dataSource)
-      .entityManagerProvider(entityManagerProvider)
-      .transactionManager(transactionManager)
-      .upcasterChain(upCaster)
+  open fun hexagonEventBus() : HexagonEventBus{
+    return HexagonEventBus(integrationEventPublisher)
+  }
+  @Bean
+  open fun queryBus(): QueryBus {
+    return SimpleQueryBus.builder()
+      .errorHandler(LoggingQueryInvocationErrorHandler.builder().build())
       .build()
+  }
+
+  @Bean
+  open fun jdbcConnectionProvider(dataSource: DataSource): ConnectionProvider {
+    return UnitOfWorkAwareConnectionProviderWrapper(SpringDataSourceConnectionProvider(dataSource))
+  }
+
+  @Bean
+  open fun eventDispatcher(eventBus: EventBus): EventDispatcherInterface {
+    return EventDispatcher(eventBus)
   }
 }

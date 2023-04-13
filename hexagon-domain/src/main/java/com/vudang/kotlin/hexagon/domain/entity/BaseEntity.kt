@@ -1,18 +1,25 @@
 package com.vudang.kotlin.hexagon.domain.entity
 
+import com.vudang.kotlin.hexagon.domain.event.BaseEvent
 import java.time.Instant
 
 abstract class BaseEntity {
   var id: Long = 0
   var createdAt: Long = Instant.now().toEpochMilli()
   var updatedAt: Long = Instant.now().toEpochMilli()
-  protected var version = 0
-  private var events = mutableListOf<Any>()
+  var version = 0
+  var events = mutableListOf<BaseEvent>()
 
-  fun flushEvents(): List<Any> {
+  open fun flushEvents(): List<BaseEvent> {
     val flushableEvents = events
-    events = mutableListOf<Any>()
+    events = mutableListOf<BaseEvent>()
 
     return flushableEvents
   }
+
+  fun updateVersion() {
+    version.plus(1)
+  }
 }
+
+

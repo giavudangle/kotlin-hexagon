@@ -8,19 +8,17 @@ import com.vudang.kotlin.hexagon.api.response.AccountResponse
 import com.vudang.kotlin.hexagon.api.response.BaseResponse
 import com.vudang.kotlin.hexagon.api.service.AccountService
 import com.vudang.kotlin.hexagon.domain.context.HexagonContext
+import java.util.*
 import lombok.RequiredArgsConstructor
 import org.axonframework.commandhandling.gateway.CommandGateway
-import org.axonframework.eventsourcing.eventstore.EventStore
 import org.axonframework.queryhandling.QueryGateway
 import org.springframework.stereotype.Service
-import java.util.*
 
 @Service
 @RequiredArgsConstructor
 class AccountServiceImpl(
   private val queryGateway: QueryGateway,
-  private val commandGateway: CommandGateway,
-  private val eventStore: EventStore
+  private val commandGateway: CommandGateway
 ) : AccountService {
   private val context: HexagonContext = HexagonContext.getHexagonContext()
 
@@ -33,18 +31,15 @@ class AccountServiceImpl(
   }
 
   override fun create(request: CreateAccountRequest): BaseResponse<Boolean> {
-          commandGateway.sendAndWait<Any>(
-            CreateAccountCommand(
-              accountId = UUID.randomUUID(),
-              email = request.email,
-              password = request.password,
-              name = request.name
-            ))
+    commandGateway.sendAndWait<Any>(
+      CreateAccountCommand(
+        accountId = UUID.randomUUID(),
+        email = request.email,
+        password = request.password,
+        name = request.name
+      )
+    )
 
-    return BaseResponse.success(true)
-  }
-
-  override fun getEventsByAccountId(accountId: Long): List<Any?> {
-    return this.eventStore.readEvents(accountId.toString()).asStream().map { it.payload }.toList()
+    return BaseResponse.ok()
   }
 }

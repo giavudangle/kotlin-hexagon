@@ -16,7 +16,8 @@ class AccountController(private val accountService: AccountService) {
   @GetMapping(Constants.FIND)
   @ResponseBody
   fun find(@PathVariable id: Long): BaseResponse<AccountResponse> {
-    return accountService.findById(id)
+    val response: BaseResponse<AccountResponse> = accountService.findById(id)
+    return response
   }
 
   @PostMapping(Constants.ROOT)
