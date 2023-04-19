@@ -1,4 +1,4 @@
-package com.kotlin.hexagon.infrastructure.persistence.config
+package hexagon.infrastructure.persistence.config
 
 import hexagon.infrastructure.persistence.plugin.TimestampPlugin
 import javax.sql.DataSource
@@ -16,7 +16,7 @@ import org.springframework.core.io.Resource
 
 @Configuration
 @MapperScan(
-  basePackages = ["com.kotlin.hexagon.infrastructure.persistence.mapper"],
+  basePackages = ["hexagon.infrastructure.persistence.mapper"],
   sqlSessionTemplateRef = "sqlSessionTemplate"
 )
 open class MyBatisConfig {

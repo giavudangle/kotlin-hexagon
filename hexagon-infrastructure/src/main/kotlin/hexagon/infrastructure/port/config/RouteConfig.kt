@@ -1,3 +1,3 @@
-package com.kotlin.hexagon.infrastructure.port.config
+package hexagon.infrastructure.port.config
 
 class RouteConfig {}

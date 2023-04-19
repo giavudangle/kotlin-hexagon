@@ -18,7 +18,7 @@ open class SwaggerConfiguration {
   open fun apiDocket(): Docket? {
     return Docket(DocumentationType.SWAGGER_2)
       .select()
-      .apis(RequestHandlerSelectors.basePackage("com.kotlin.hexagon"))
+      .apis(RequestHandlerSelectors.basePackage("hexagon"))
       .paths(PathSelectors.any())
       .build()
       .apiInfo(getApiInfo())

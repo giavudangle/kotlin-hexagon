@@ -16,6 +16,7 @@
     <properties>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+        <start-class>hexagon.infrastructure.ApplicationKt</start-class>
     </properties>
 
     <dependencies>
@@ -141,6 +142,7 @@
     <build>
         <directory>target</directory>
         <finalName>hexagon-infrastructure</finalName>
+        <sourceDirectory>src/main/kotlin</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -153,7 +155,7 @@
                             <goal>repackage</goal>
                         </goals>
                         <configuration>
-                            <mainClass>hexagon.infrastructure.Application</mainClass>
+                            <mainClass>hexagon.infrastructure.ApplicationKt</mainClass>
                         </configuration>
                     </execution>
                 </executions>
