@@ -8,7 +8,7 @@
     </settings>
 
     <typeAliases>
-        <typeAlias alias="Account" type="com.vudang.kotlin.hexagon.domain.entity.Account"/>
+        <typeAlias alias="Account" type="hexagon.domain.entity.Account"/>
     </typeAliases>
 
     <typeHandlers>
