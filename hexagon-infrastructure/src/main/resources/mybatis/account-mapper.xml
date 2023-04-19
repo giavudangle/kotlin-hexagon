@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.vudang.kotlin.hexagon.infrastructure.persistence.mapper.AccountMapper">
+<mapper namespace="hexagon.infrastructure.persistence.mapper.AccountMapper">
     <sql id="tableName">account</sql>
     <sql id="baseColumnList">
         name,
@@ -19,7 +19,7 @@
     </sql>
 
     <insert
-            id="insert" parameterType="com.vudang.kotlin.hexagon.domain.entity.Account"
+            id="insert" parameterType="hexagon.domain.entity.Account"
             keyColumn="id"
             keyProperty="id"
             useGeneratedKeys="true">
@@ -35,7 +35,7 @@
         )
     </insert>
 
-    <update id="update" parameterType="com.vudang.kotlin.hexagon.domain.entity.Account">
+    <update id="update" parameterType="hexagon.domain.entity.Account">
     </update>
 
     <select id="findByIds">

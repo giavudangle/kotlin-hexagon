@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.vudang.kotlin.hexagon</groupId>
+        <groupId>com.kotlin.hexagon</groupId>
         <artifactId>kotlin-hexagon</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
@@ -11,6 +11,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>hexagon-infrastructure</artifactId>
+    <name>hexagon-infrastructure</name>
 
     <properties>
         <maven.compiler.source>${java.version}</maven.compiler.source>
@@ -19,19 +20,19 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.vudang.kotlin.hexagon</groupId>
+            <groupId>com.kotlin.hexagon</groupId>
             <artifactId>hexagon-domain</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.vudang.kotlin.hexagon</groupId>
+            <groupId>com.kotlin.hexagon</groupId>
             <artifactId>hexagon-adapter</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.vudang.kotlin.hexagon</groupId>
+            <groupId>com.kotlin.hexagon</groupId>
             <artifactId>hexagon-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.vudang.kotlin.hexagon</groupId>
+            <groupId>com.kotlin.hexagon</groupId>
             <artifactId>hexagon-shared</artifactId>
         </dependency>
         <dependency>
@@ -137,15 +138,25 @@
         </dependency>
         <!-- End of testing dependencies -->
     </dependencies>
-
     <build>
+        <directory>target</directory>
+        <finalName>hexagon-infrastructure</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.vudang.kotlin.hexagon.infrastructure.Application</mainClass>
-                </configuration>
+                <executions>
+                    <execution>
+                        <id>repackage</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>hexagon.infrastructure.Application</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

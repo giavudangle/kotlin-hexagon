@@ -9,7 +9,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.vudang.kotlin.hexagon</groupId>
+    <groupId>com.kotlin.hexagon</groupId>
     <artifactId>kotlin-hexagon</artifactId>
     <name>kotlin-hexagon</name>
     <version>1.0.0-SNAPSHOT</version>
@@ -87,27 +87,27 @@
             </dependency>
 
             <dependency>
-                <groupId>com.vudang.kotlin.hexagon</groupId>
+                <groupId>com.kotlin.hexagon</groupId>
                 <artifactId>hexagon-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.vudang.kotlin.hexagon</groupId>
+                <groupId>com.kotlin.hexagon</groupId>
                 <artifactId>hexagon-shared</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.vudang.kotlin.hexagon</groupId>
+                <groupId>com.kotlin.hexagon</groupId>
                 <artifactId>hexagon-adapter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.vudang.kotlin.hexagon</groupId>
+                <groupId>com.kotlin.hexagon</groupId>
                 <artifactId>hexagon-infrastructure</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.vudang.kotlin.hexagon</groupId>
+                <groupId>com.kotlin.hexagon</groupId>
                 <artifactId>hexagon-domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -195,48 +195,30 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.1.16.RELEASE</version>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
+                <version>${spring-boot.version}</version>
             </plugin>
+        </plugins>
+    </pluginManagement>
+
+    <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.source}</target>
-                </configuration>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <version>${kotlin.version}</version>
                 <executions>
-                    <!-- Replacing default-compile as it is treated specially by maven -->
                     <execution>
-                        <id>default-compile</id>
-                        <phase>none</phase>
-                    </execution>
-                    <!-- Replacing default-testCompile as it is treated specially by maven -->
-                    <execution>
-                        <id>default-testCompile</id>
-                        <phase>none</phase>
-                    </execution>
-                    <execution>
-                        <id>java-compile</id>
-                        <phase>compile</phase>
+                        <id>compile</id>
                         <goals>
                             <goal>compile</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>java-test-compile</id>
-                        <phase>test-compile</phase>
+                        <id>test-compile</id>
                         <goals>
-                            <goal>testCompile</goal>
+                            <goal>test-compile</goal>
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>com.diffplug.spotless</groupId>
@@ -272,32 +254,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-maven-plugin</artifactId>
-                <version>${kotlin.version}</version>
-                <executions>
-                    <execution>
-                        <id>compile</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>test-compile</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>test-compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <jvmTarget>17</jvmTarget>
-                </configuration>
-            </plugin>
         </plugins>
-    </pluginManagement>
 </build>
 
 </project>
