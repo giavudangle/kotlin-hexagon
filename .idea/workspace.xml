@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="">
+    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="setup config for packaging project">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-external/src/main/kotlin/ExternalCommon.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-shared/src/main/kotlin/hexagon.shared/SharedCommon.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-adapter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-domain/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/config/SwaggerConfiguration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/config/SwaggerConfiguration.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/persistence/config/MyBatisConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/persistence/config/MyBatisConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/port/config/RouteConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/port/config/RouteConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/kotlin/hexagon/adapter/eventbus/HexagonEventBus.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/kotlin/hexagon/adapter/eventbus/HexagonEventBus.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-external/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-external/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-shared/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-shared/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +85,7 @@
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.13463628" />
+    <property name="project.structure.side.proportion" value="0.24022877" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -110,11 +111,12 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn compile" />
-      <command value="mvn spotless:apply" />
       <command value="mvn package" />
       <command value="mvn spring-boot:run" />
+      <command value="mvn spotless:apply" />
       <command value="mvn install" />
       <command value="mvn clean" />
+      <command value="mvn deploy" />
     </option>
   </component>
   <component name="RunManager">
@@ -272,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680246276375</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="setup config for packaging project">
+      <created>1681923121996</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681923121996</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -304,7 +313,8 @@
     <MESSAGE value="build full account aggregate lifecycle" />
     <MESSAGE value="update some annotations" />
     <MESSAGE value="refactor module" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor module" />
+    <MESSAGE value="setup config for packaging project" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup config for packaging project" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

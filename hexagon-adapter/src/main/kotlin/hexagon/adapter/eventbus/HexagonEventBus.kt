@@ -27,7 +27,7 @@ open class HexagonEventBus(
   override fun prepareCommit(events: MutableList<out EventMessage<*>>) {
     println("In prepare commit")
     val domainEvents: List<EventMessage<*>> =
-      events.filterIsInstance<hexagon.adapter.eventbus.DomainEventMessage<*>>().toList()
+      events.filterIsInstance<DomainEventMessage<*>>().toList()
     if (domainEvents.isNotEmpty()) {
       eventProcessors.forEach { it.accept(domainEvents) }
     }

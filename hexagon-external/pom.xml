@@ -12,6 +12,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>hexagon-external</artifactId>
     <name>hexagon-external</name>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>${java.version}</maven.compiler.source>
@@ -21,5 +22,9 @@
     <dependencies>
 
     </dependencies>
+
+    <build>
+        <sourceDirectory>src/main/kotlin</sourceDirectory>
+    </build>
 
 </project>

@@ -1,5 +1,15 @@
 version: '3.8'
 services:
+  hexagon-root:
+    image: hexagon-root
+    build:
+      context: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "db"
+    volumes:
+      - /data/hexagon-root
   db:
     container_name: pg_container
     image: postgres:14-bullseye
@@ -7,9 +17,11 @@ services:
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
-      POSTGRES_DB: test_db
+      POSTGRES_DB: hexagon_db
     ports:
       - "5432:5432"
+    volumes:
+      - /data/pg_db
   pgadmin:
     container_name: pgadmin4_container
     image: dpage/pgadmin4
@@ -19,3 +31,5 @@ services:
       PGADMIN_DEFAULT_PASSWORD: root
     ports:
       - "5050:80"
+    volumes:
+      - /dât/pg_admin
