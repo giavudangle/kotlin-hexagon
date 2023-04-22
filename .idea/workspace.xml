@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="setup config for packaging project">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-external/src/main/kotlin/ExternalCommon.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-shared/src/main/kotlin/hexagon.shared/SharedCommon.kt" afterDir="false" />
+    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="implement for docker containerization">
+      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application-deployment.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/kotlin/hexagon/adapter/eventbus/HexagonEventBus.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/kotlin/hexagon/adapter/eventbus/HexagonEventBus.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-external/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-external/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-shared/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-shared/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681923121996</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="implement for docker containerization">
+      <created>1682177332613</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1682177332613</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,7 +315,8 @@
     <MESSAGE value="update some annotations" />
     <MESSAGE value="refactor module" />
     <MESSAGE value="setup config for packaging project" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup config for packaging project" />
+    <MESSAGE value="implement for docker containerization" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement for docker containerization" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
