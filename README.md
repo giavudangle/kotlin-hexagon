@@ -16,8 +16,8 @@ Dependencies go inwards (arrow is dependencies direction)
 
 #### Docker Container
 ```shell
-Start container: $ docker compose up
-Force rebuild image: $ docker-compose up --build -d
+$ docker compose up
+$ docker-compose up --build -d
 ```
 
 #### Maven commands

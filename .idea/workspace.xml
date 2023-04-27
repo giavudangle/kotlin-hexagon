@@ -4,26 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="setup for environment for development and deployment">
-      <change afterPath="$PROJECT_DIR$/DockerfileDeployment" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deploy.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-api/src/main/kotlin/hexagon/api/service/AuthService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prometheus.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="setup prometheus and grafana">
+      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application-production.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/kotlin/hexagon/adapter/eventbus/IntegrationEventPublisherInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/kotlin/hexagon/adapter/eventbus/IntegrationEventPublisherInterface.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-api/src/main/kotlin/hexagon/api/service/AuthService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-api/src/main/kotlin/hexagon/api/service/AuthService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/config/SwaggerConfiguration.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/eventbus/IntegrationEventPublisher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/eventbus/IntegrationEventPublisher.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/persistence/mapper/AccountMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/persistence/mapper/AccountMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application-deployment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application-deployment.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/prometheus.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682177692411</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="setup prometheus and grafana">
+      <created>1682617803463</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1682617803464</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -341,7 +341,8 @@
     <MESSAGE value="setup config for packaging project" />
     <MESSAGE value="implement for docker containerization" />
     <MESSAGE value="setup for environment for development and deployment" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup for environment for development and deployment" />
+    <MESSAGE value="setup prometheus and grafana" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup prometheus and grafana" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
