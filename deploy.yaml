@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hexagon-cloud-service
+spec:
+  selector:
+    app: hexagon-cloud-app
+  ports:
+    - protocol: "TCP"
+      port: 8080
+      targetPort: 8080
+  type: LoadBalancer
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hexagon-cloud-app
+spec:
+  selector:
+    matchLabels:
+      app: hexagon-cloud-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: hexagon-cloud-app
+    spec:
+      containers:
+        - name: hexagon-cloud-app
+          image: hexagon-root
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+
+
+
+

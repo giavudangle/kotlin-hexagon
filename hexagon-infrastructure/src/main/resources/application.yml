@@ -1,27 +1,19 @@
 spring:
   application: kotlin-hexagon
-
   datasource:
     url: jdbc:postgresql://localhost:5432/hexagon_db
     username: root
     password: root
-
   banner:
     location: banner.txt
-
   flyway:
     enabled: true
     locations: classpath/migrations
     schemas: PUBLIC
-
   h2:
     console:
       enabled: true
       path: /h2-console
-
-  mvc:
-    pathmatch:
-      matching-strategy: ANT_PATH_MATCHER
 
 javax:
   persistence:
@@ -34,3 +26,5 @@ axon:
     general: jackson
   axonserver:
     servers: localhost:8124
+
+

@@ -1,6 +1,8 @@
 spring:
   application: kotlin-hexagon
-
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
   datasource:
     url: jdbc:postgresql://db:5432/hexagon_db
     username: root
@@ -18,10 +20,6 @@ spring:
     console:
       enabled: true
       path: /h2-console
-
-  mvc:
-    pathmatch:
-      matching-strategy: ANT_PATH_MATCHER
 
 javax:
   persistence:

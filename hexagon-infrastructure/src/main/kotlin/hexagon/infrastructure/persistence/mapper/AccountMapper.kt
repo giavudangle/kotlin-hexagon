@@ -8,3 +8,4 @@ interface AccountMapper : BaseMapper<Account> {
   override fun findByIds(ids: List<Long>): List<Account>
   fun findByEmail(email: String): Account?
 }
+

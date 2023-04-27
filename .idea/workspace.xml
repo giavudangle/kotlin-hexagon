@@ -4,11 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="implement for docker containerization">
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application-deployment.yml" afterDir="false" />
+    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="setup for environment for development and deployment">
+      <change afterPath="$PROJECT_DIR$/DockerfileDeployment" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-api/src/main/kotlin/hexagon/api/service/AuthService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prometheus.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/kotlin/hexagon/adapter/eventbus/IntegrationEventPublisherInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/kotlin/hexagon/adapter/eventbus/IntegrationEventPublisherInterface.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/Application.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/config/SwaggerConfiguration.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/eventbus/IntegrationEventPublisher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/eventbus/IntegrationEventPublisher.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/persistence/mapper/AccountMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/persistence/mapper/AccountMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application-deployment.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +35,8 @@
       <list>
         <option value="Kotlin Object" />
         <option value="Class" />
-        <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>
@@ -63,7 +78,6 @@
       <MavenGeneralSettings>
         <option name="alwaysUpdateSnapshots" value="true" />
         <option name="localRepository" value="$USER_HOME$/.m2/vudang" />
-        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
         <option name="usePluginRegistry" value="true" />
         <option name="userSettingsFile" value="$USER_HOME$/.m2/vudang/settings.xml" />
@@ -77,9 +91,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24022877" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -109,8 +126,8 @@
       <command value="mvn spring-boot:run" />
       <command value="mvn spotless:apply" />
       <command value="mvn install" />
-      <command value="mvn clean" />
       <command value="mvn deploy" />
+      <command value="mvn clean" />
     </option>
   </component>
   <component name="RunManager">
@@ -282,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682177332613</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="setup for environment for development and deployment">
+      <created>1682177692411</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1682177692411</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -316,7 +340,8 @@
     <MESSAGE value="refactor module" />
     <MESSAGE value="setup config for packaging project" />
     <MESSAGE value="implement for docker containerization" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement for docker containerization" />
+    <MESSAGE value="setup for environment for development and deployment" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup for environment for development and deployment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
