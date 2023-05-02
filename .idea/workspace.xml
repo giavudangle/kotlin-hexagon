@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="custom prometheus and grafana">
-      <change afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prometheus-production.yml" afterDir="false" />
+    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="integrate with elk stack">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/port/controller/AccountController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/port/controller/AccountController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/port/controller/MainController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/port/controller/MainController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/prometheus.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682620905468</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="integrate with elk stack">
+      <created>1683054494130</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1683054494130</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -347,7 +347,8 @@
     <MESSAGE value="setup for environment for development and deployment" />
     <MESSAGE value="setup prometheus and grafana" />
     <MESSAGE value="custom prometheus and grafana" />
-    <option name="LAST_COMMIT_MESSAGE" value="custom prometheus and grafana" />
+    <MESSAGE value="integrate with elk stack" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrate with elk stack" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

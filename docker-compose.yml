@@ -1,6 +1,7 @@
 version: '3.8'
 services:
   hexagon-root:
+    container_name: hexagon-root-system
     image: hexagon-root
     restart: on-failure
     build:
@@ -48,48 +49,4 @@ services:
     image: "grafana/grafana"
     ports:
       - "3000:3000"
-  elasticsearch:
-    image: elasticsearch:8.7.0
-    container_name: elasticsearch
-    restart: on-failure
-    volumes:
-      - elastic_data:/usr/share/elasticsearch/data/
-    environment:
-      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-      discovery.type: single-node
-      xpack.security.enabled: true
-      xpack.security.enrollment.enabled: true
-    ports:
-      - '9200:9200'
-      - '9300:9300'
-    networks:
-      - elk
-  logstash:
-    image: logstash:8.7.0
-    container_name: logstash
-    restart: on-failure
-    volumes:
-      - ./logstash.conf/:/usr/share/logstash.conf
-      - ./logstash.yml/:/usr/share/logstash.yml
-    command: logstash -f /logstash_dir/logstash.conf
-    depends_on:
-      - elasticsearch
-    ports:
-      - '9600:9600'
-    environment:
-      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
-    networks:
-      - elk
-  kibana:
-    image: kibana:8.7.0
-    container_name: kibana
-    restart: on-failure
-    ports:
-      - '5601:5601'
-    environment:
-      - ELASTICSEARCH_URL=http://elasticsearch:9200
-    depends_on:
-      - elasticsearch
-    networks:
-      - elk
 
