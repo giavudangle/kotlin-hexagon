@@ -5,9 +5,12 @@ import hexagon.api.response.AccountResponse
 import hexagon.api.response.BaseResponse
 import hexagon.api.service.AccountService
 import org.springframework.web.bind.annotation.*
+import java.util.logging.Logger
 
 @RestController
 class AccountController(private val accountService: AccountService) {
+  private val logger = Logger.getLogger(this.javaClass.name)
+
   private object Constants {
     const val ROOT = "/account"
     const val FIND = "$ROOT/{id}"
@@ -16,8 +19,8 @@ class AccountController(private val accountService: AccountService) {
   @GetMapping(Constants.FIND)
   @ResponseBody
   fun find(@PathVariable id: Long): BaseResponse<AccountResponse> {
-    val response: BaseResponse<AccountResponse> = accountService.findById(id)
-    return response
+    logger.info("Start to find inside AccountController")
+    return accountService.findById(id)
   }
 
   @PostMapping(Constants.ROOT)

@@ -1,0 +1,12 @@
+28-04-2023 15:53:33.376 [main] INFO  hexagon.infrastructure.ApplicationKt.logStarting - Starting ApplicationKt using Java 17.0.5 on Vus-MacBook-Pro.local with PID 54043 (/Users/vudang/Desktop/kotlin-hexagon/hexagon-infrastructure/target/classes started by vudang in /Users/vudang/Desktop/kotlin-hexagon)
+28-04-2023 15:53:33.377 [main] INFO  hexagon.infrastructure.ApplicationKt.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+28-04-2023 15:53:35.355 [main] INFO  hexagon.infrastructure.ApplicationKt.logStarted - Started ApplicationKt in 2.214 seconds (JVM running for 2.415)
+02-05-2023 21:40:52.654 [main] INFO  hexagon.infrastructure.ApplicationKt.logStarting - Starting ApplicationKt using Java 17.0.5 on Vus-MacBook-Pro.local with PID 7362 (/Users/vudang/Desktop/kotlin-hexagon/hexagon-infrastructure/target/classes started by vudang in /Users/vudang/Desktop/kotlin-hexagon)
+02-05-2023 21:40:52.655 [main] INFO  hexagon.infrastructure.ApplicationKt.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02-05-2023 21:40:55.445 [main] INFO  hexagon.infrastructure.ApplicationKt.logStarted - Started ApplicationKt in 3.199 seconds (JVM running for 3.405)
+03-05-2023 00:37:12.828 [main] INFO  hexagon.infrastructure.ApplicationKt.logStarting - Starting ApplicationKt using Java 17.0.5 on Vus-MacBook-Pro.local with PID 29643 (/Users/vudang/Desktop/kotlin-hexagon/hexagon-infrastructure/target/classes started by vudang in /Users/vudang/Desktop/kotlin-hexagon)
+03-05-2023 00:37:12.829 [main] INFO  hexagon.infrastructure.ApplicationKt.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+03-05-2023 00:37:14.959 [main] INFO  hexagon.infrastructure.ApplicationKt.logStarted - Started ApplicationKt in 2.561 seconds (JVM running for 2.845)
+03-05-2023 00:37:40.126 [main] INFO  hexagon.infrastructure.ApplicationKt.logStarting - Starting ApplicationKt using Java 17.0.5 on Vus-MacBook-Pro.local with PID 29722 (/Users/vudang/Desktop/kotlin-hexagon/hexagon-infrastructure/target/classes started by vudang in /Users/vudang/Desktop/kotlin-hexagon)
+03-05-2023 00:37:40.127 [main] INFO  hexagon.infrastructure.ApplicationKt.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+03-05-2023 00:37:42.013 [main] INFO  hexagon.infrastructure.ApplicationKt.logStarted - Started ApplicationKt in 2.155 seconds (JVM running for 2.353)

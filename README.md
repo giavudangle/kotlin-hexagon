@@ -1,3 +1,4 @@
+
 #### Architecture
 <img src="./docs/diagram/1. Architecture.png"/>    
 <img src="./docs/diagram/2. Layers.webp"/>
@@ -25,6 +26,24 @@ $ docker-compose up --build -d
  $ mvn clean
  $ mvn download source
  $ mvn dependency:resolve
+```
+
+
+#### ELK Stack Setup
+
+```shell 
+1. Elasticsearch
+docker ps
+docker exec -u 0 -it <elasticsearch_pid> bash
+.config/elasticsearch-setup-passwords auto
+2. Kibana
+ 
+apt-get update
+apt-get install nano
+nano config/kibana.yml
+elasticsearch.username: <kibana_username>
+elasticsearch.password: <kibana_password>
+3. Logstash
 ```
 
 #### OpenAPI and Swagger
