@@ -4,9 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="integrate with elk stack">
+    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="remove manual configuration">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/elk/elastic/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/elk/elastic/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/elk/elastic/elasticsearch.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/elk/kibana/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/elk/kibana/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/elk/kibana/kibana.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/elk/logstash/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/elk/logstash/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/elk/logstash/logstash.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/elk/logstash/logstash.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DockerfileDeployment" beforeDir="false" afterPath="$PROJECT_DIR$/DockerfileDeployment" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/port/controller/AccountController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/port/controller/AccountController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/application.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +96,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/elk/logstash" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24022877" />
@@ -83,6 +104,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/elk/logstash" />
       <recent name="$PROJECT_DIR$/hexagon-infrastructure" />
       <recent name="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com.vudang.kotlin.hexagon.infrastructure/persistence/config" />
       <recent name="$PROJECT_DIR$/hexagon-infrastructure/src/main/java/com.vudang.kotlin.hexagon.infrastructure" />
@@ -105,12 +127,13 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn compile" />
-      <command value="mvn package" />
       <command value="mvn spring-boot:run" />
       <command value="mvn install" />
       <command value="mvn deploy" />
       <command value="mvn spotless:apply" />
       <command value="mvn clean" />
+      <command value="mvn package" />
+      <command value="mvn clean package" />
     </option>
   </component>
   <component name="RunManager">
@@ -310,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683054494130</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="remove manual configuration">
+      <created>1683054690936</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1683054690936</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,7 +378,8 @@
     <MESSAGE value="setup prometheus and grafana" />
     <MESSAGE value="custom prometheus and grafana" />
     <MESSAGE value="integrate with elk stack" />
-    <option name="LAST_COMMIT_MESSAGE" value="integrate with elk stack" />
+    <MESSAGE value="remove manual configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove manual configuration" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

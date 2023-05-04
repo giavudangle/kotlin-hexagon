@@ -1,17 +1,21 @@
 version: '3.8'
 services:
   hexagon-root:
-    container_name: hexagon-root-system
+    container_name: hexagon-system
     image: hexagon-root
-    restart: on-failure
+    restart: unless-stopped
     build:
       context: ./
+      dockerfile: DockerfileDeployment
     ports:
       - "8080:8080"
     depends_on:
       - "db"
-    volumes:
-      - /data/hexagon-root
+      - "logstash"
+      - "kibana"
+      - "elasticsearch"
+    networks:
+      - hexagon-network
   db:
     container_name: pg_container
     image: postgres:14-bullseye
@@ -22,8 +26,10 @@ services:
       POSTGRES_DB: hexagon_db
     ports:
       - "5432:5432"
+    networks:
+      - hexagon-network
     volumes:
-      - /data/pg_db
+      - db-data:/var/lib/postgres
   pgadmin:
     container_name: pgadmin4_container
     image: dpage/pgadmin4
@@ -35,8 +41,10 @@ services:
       - "5050:80"
     depends_on:
       - "db"
+    networks:
+      - hexagon-network
     volumes:
-      - /data/pg_admin
+      - db-data:/var/lib/pgadmin
   prometheus:
     container_name: prometheus
     image: "prom/prometheus"
@@ -44,9 +52,88 @@ services:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
+    networks:
+      - hexagon-network
   grafana:
     container_name: grafana
     image: "grafana/grafana"
     ports:
       - "3000:3000"
+    networks:
+      - hexagon-network
 
+  elasticsearch:
+    container_name: elasticsearch
+    build:
+      context: elk/elastic
+      args:
+        ELASTIC_VERSION: ${ELASTIC_VERSION}
+    volumes:
+      - ./elk/elastic/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,Z
+      - ./elk/elastic:/usr/share/elasticsearch/data:Z
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      node.name: elasticsearch
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+      # Bootstrap password.
+      # Used to initialize the keystore during the initial startup of
+      # Elasticsearch. Ignored on subsequent runs.
+      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD:-}
+      # Use single node discovery in order to disable production mode and avoid bootstrap checks.
+      # see: https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
+      discovery.type: single-node
+    networks:
+      - hexagon-network
+    restart: unless-stopped
+
+  logstash:
+    container_name: logstash
+    build:
+      context: elk/logstash
+      args:
+        ELASTIC_VERSION: ${ELASTIC_VERSION}
+    command: -f /usr/share/logstash/logstash.conf
+    volumes:
+      - ./elk/logstash/logstash.yml:/usr/share/logstash/config/logstash.yml:ro,Z
+      - ./elk/logstash/logstash.conf:/usr/share/logstash/logstash.conf:ro,Z
+      - ./logs/application.log:/tmp/logs/application.log
+    ports:
+      - "5044:5044"
+      - "50000:50000/tcp"
+      - "50000:50000/udp"
+      - "9600:9600"
+    environment:
+      LS_JAVA_OPTS: -Xms256m -Xmx256m
+      LOGSTASH_INTERNAL_PASSWORD: ${LOGSTASH_INTERNAL_PASSWORD:-}
+    networks:
+      - hexagon-network
+    depends_on:
+      - elasticsearch
+    restart: unless-stopped
+
+  kibana:
+    container_name: kibana
+    build:
+      context: elk/kibana
+      args:
+        ELASTIC_VERSION: ${ELASTIC_VERSION}
+    volumes:
+      - ./elk/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml:ro,Z
+    ports:
+      - "5601:5601"
+    environment:
+      KIBANA_SYSTEM_PASSWORD: ${KIBANA_SYSTEM_PASSWORD:-}
+    networks:
+      - hexagon-network
+    depends_on:
+      - elasticsearch
+    restart: unless-stopped
+
+networks:
+  hexagon-network:
+
+volumes:
+  elasticsearch:
+  db-data:

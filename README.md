@@ -35,7 +35,7 @@ $ docker-compose up --build -d
 1. Elasticsearch
 docker ps
 docker exec -u 0 -it <elasticsearch_pid> bash
-.config/elasticsearch-setup-passwords auto
+./bin/elasticsearch-setup-passwords auto
 2. Kibana
  
 apt-get update

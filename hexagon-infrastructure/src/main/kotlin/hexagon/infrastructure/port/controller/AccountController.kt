@@ -4,10 +4,12 @@ import hexagon.api.request.CreateAccountRequest
 import hexagon.api.response.AccountResponse
 import hexagon.api.response.BaseResponse
 import hexagon.api.service.AccountService
+import lombok.extern.slf4j.Slf4j
 import org.springframework.web.bind.annotation.*
 import java.util.logging.Logger
 
 @RestController
+@Slf4j
 class AccountController(private val accountService: AccountService) {
   private val logger = Logger.getLogger(this.javaClass.name)
 
@@ -19,7 +21,7 @@ class AccountController(private val accountService: AccountService) {
   @GetMapping(Constants.FIND)
   @ResponseBody
   fun find(@PathVariable id: Long): BaseResponse<AccountResponse> {
-    logger.info("Start to find inside AccountController")
+    logger.info("Start to find inside AccountController updated")
     return accountService.findById(id)
   }
 
