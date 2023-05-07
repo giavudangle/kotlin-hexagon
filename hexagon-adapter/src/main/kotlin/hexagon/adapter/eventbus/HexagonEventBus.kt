@@ -16,16 +16,14 @@ open class HexagonEventBus(
   private val integrationEventPublisher: IntegrationEventPublisherInterface
 ) : SimpleEventBus(builder()) {
   companion object {
-    private fun logger(): Logger {
-      return LoggerFactory.getLogger(hexagon.adapter.eventbus.HexagonEventBus::class.java)
-    }
+    val logger: Logger = LoggerFactory.getLogger(HexagonEventBus.javaClass.name)
   }
 
   private var eventProcessors: MutableSet<Consumer<List<EventMessage<*>>>> = CopyOnWriteArraySet()
   private val eventIds: ConcurrentHashMap<String, Boolean> = ConcurrentHashMap()
 
   override fun prepareCommit(events: MutableList<out EventMessage<*>>) {
-    println("In prepare commit")
+    logger.info("In prepare-commit phase of the current unit of work")
     val domainEvents: List<EventMessage<*>> =
       events.filterIsInstance<DomainEventMessage<*>>().toList()
     if (domainEvents.isNotEmpty()) {
@@ -34,9 +32,9 @@ open class HexagonEventBus(
   }
 
   override fun afterCommit(events: MutableList<out EventMessage<*>>) {
-    println("In after commit")
+    logger.info("In after-commit phase of the current unit of work")
     val integrationEvents: List<EventMessage<*>> =
-      events.filterIsInstance<hexagon.adapter.eventbus.IntegrationEventMessage<*>>().toList()
+      events.filterIsInstance<IntegrationEventMessage<*>>().toList()
     if (integrationEvents.isNotEmpty()) {
       for (eventMessage: EventMessage<*> in events) {
         if (isCurrentUnitOfWorkStarted() && isRootCurrentUnitOfWork()) {
@@ -44,9 +42,7 @@ open class HexagonEventBus(
           unitOfWork.onCleanup { eventIds.remove(eventMessage.identifier) }
           if (eventIds.containsKey(eventMessage.identifier)) continue
 
-          integrationEventPublisher.publish(
-            eventMessage.payload as hexagon.adapter.event.BaseIntegrationEvent
-          )
+          integrationEventPublisher.publish(eventMessage.payload as BaseIntegrationEvent)
           eventIds[eventMessage.identifier] = true
         }
       }
@@ -55,22 +51,21 @@ open class HexagonEventBus(
 
   override fun subscribe(eventProcessor: Consumer<List<EventMessage<*>>>): Registration {
     if (eventProcessors.add(eventProcessor)) {
-      if (hexagon.adapter.eventbus.HexagonEventBus.Companion.logger().isDebugEnabled)
-        hexagon.adapter.eventbus.HexagonEventBus.Companion.logger()
-          .debug("EventProcessor {} subscribed successfully", eventProcessor)
+      if (logger.isDebugEnabled)
+        logger.debug("EventProcessor {} subscribed successfully", eventProcessor)
     } else {
-      hexagon.adapter.eventbus.HexagonEventBus.Companion.logger()
-        .info("EventProcessor {} not added because it was already subscribed", eventProcessor)
+      logger.info("EventProcessor {} not added because it was already subscribed", eventProcessor)
     }
 
     return Registration {
       if (eventProcessors.remove(eventProcessor)) {
-        hexagon.adapter.eventbus.HexagonEventBus.Companion.logger()
-          .debug("EventProcessor {} unsubscribed successfully", eventProcessor)
+        logger.debug("EventProcessor {} unsubscribed successfully", eventProcessor)
         return@Registration true
       } else {
-        hexagon.adapter.eventbus.HexagonEventBus.Companion.logger()
-          .info("EventProcessor {} not removed because it was already unsubscribed", eventProcessor)
+        logger.info(
+          "EventProcessor {} not removed because it was already unsubscribed",
+          eventProcessor
+        )
         return@Registration false
       }
     }

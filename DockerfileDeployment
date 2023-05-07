@@ -18,4 +18,4 @@ COPY ${HEXAGON_ADAPTER_JAR} hexagon-adapter.jar
 COPY ${HEXAGON_INFRASTRUCTURE_JAR} hexagon-infrastructure.jar
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","/hexagon-root/hexagon-infrastructure.jar"]
+ENTRYPOINT ["java","-jar","-Dspring.profiles.active=production","/hexagon-root/hexagon-infrastructure.jar"]

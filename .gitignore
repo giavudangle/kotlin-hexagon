@@ -36,3 +36,8 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Elastic ###
+/elk/elastic/indices
+/elk/elastic/_state
+/filebeat
