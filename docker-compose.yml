@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     build:
       context: ./
-      dockerfile: DockerfileDeployment
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     depends_on:

@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="setup elk stack and logback spring">
-      <change afterPath="$PROJECT_DIR$/elk/filebeat/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/elk/filebeat/filebeat.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="1c1cede3-69c4-44ca-b427-84b9502eac22" name="Changes" comment="filebeat and logstash integration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DockerfileDeployment" beforeDir="false" afterPath="$PROJECT_DIR$/DockerfileDeployment" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DockerfileDeployment" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elk/logstash/logstash.conf" beforeDir="false" afterPath="$PROJECT_DIR$/elk/logstash/logstash.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-adapter/src/main/kotlin/hexagon/adapter/eventbus/HexagonEventBus.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-adapter/src/main/kotlin/hexagon/adapter/eventbus/HexagonEventBus.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/port/controller/AccountController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/kotlin/hexagon/infrastructure/port/controller/AccountController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application-production.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application-production.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hexagon-infrastructure/src/main/resources/logback-spring.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683187008275</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="filebeat and logstash integration">
+      <created>1683444399255</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1683444399255</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -352,7 +351,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="build codebase for kotlin-hexagon" />
     <MESSAGE value="build project layer" />
     <MESSAGE value="configure mybatis for infrastructure layer" />
     <MESSAGE value="configure mybatis and flyway for infrastructure layer" />
@@ -377,7 +375,8 @@
     <MESSAGE value="integrate with elk stack" />
     <MESSAGE value="remove manual configuration" />
     <MESSAGE value="setup elk stack and logback spring" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup elk stack and logback spring" />
+    <MESSAGE value="filebeat and logstash integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="filebeat and logstash integration" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

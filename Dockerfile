@@ -1,8 +1,8 @@
-FROM maven:3.8.4-openjdk-17 as build
+FROM --platform=linux/amd64 maven:3.8.4-openjdk-17 as build
 WORKDIR /hexagon-root
 RUN mvn clean package -DskipTests=true
 
-FROM openjdk:17-alpine
+FROM --platform=linux/amd64 openjdk:17-alpine
 WORKDIR /hexagon-root
 ARG HEXAGON_DOMAIN_JAR=/hexagon-domain/target/*.jar
 ARG HEXAGON_API_JAR=/hexagon-api/target/*.jar
@@ -18,4 +18,4 @@ COPY ${HEXAGON_ADAPTER_JAR} hexagon-adapter.jar
 COPY ${HEXAGON_INFRASTRUCTURE_JAR} hexagon-infrastructure.jar
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","/hexagon-root/hexagon-infrastructure.jar"]
+ENTRYPOINT ["java","-jar","-Dspring.profiles.active=production","/hexagon-root/hexagon-infrastructure.jar"]
