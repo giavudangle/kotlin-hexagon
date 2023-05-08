@@ -7,4 +7,4 @@ class CreateAccountCommand(
   val email: String,
   val name: String,
   val password: String
-) : hexagon.adapter.command.BaseCommand() {}
+) : BaseCommand() {}

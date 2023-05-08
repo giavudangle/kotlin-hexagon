@@ -37,6 +37,8 @@
         <rider.version>1.32.3</rider.version>
         <axon.version>4.6.4</axon.version>
         <prometheus.version>1.9.5</prometheus.version>
+        <java-jwt.version>3.19.2</java-jwt.version>
+        <spring-security.version>5.7.5</spring-security.version>
     </properties>
 
     <dependencyManagement>
@@ -179,6 +181,26 @@
                 <groupId>org.axonframework</groupId>
                 <artifactId>axon-spring</artifactId>
                 <version>${axon.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>${java-jwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-core</artifactId>
+                <version>${spring-security.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

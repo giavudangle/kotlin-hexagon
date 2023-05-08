@@ -14,7 +14,7 @@ class CreateAccountHandler(
   private val eventDispatcher: EventDispatcherInterface
 ) {
   @CommandHandler
-  fun handle(command: hexagon.adapter.command.CreateAccountCommand) {
+  fun handle(command: CreateAccountCommand) {
     val existedAccount = this.accountRepository.findByEmail(command.email)
     if (existedAccount != null) {
       throw EntityAlreadyExistException()

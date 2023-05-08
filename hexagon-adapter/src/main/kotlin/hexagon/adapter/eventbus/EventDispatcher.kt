@@ -13,11 +13,11 @@ class EventDispatcher(private val eventBus: EventBus) : EventDispatcherInterface
 
   override fun <T : BaseEvent?> dispatch(event: T) {
     if (event is BaseDomainEvent) {
-      eventBus.publish(hexagon.adapter.eventbus.DomainEventMessage(event))
+      eventBus.publish(DomainEventMessage(event))
     }
 
-    if (event is hexagon.adapter.event.BaseIntegrationEvent) {
-      eventBus.publish(hexagon.adapter.eventbus.IntegrationEventMessage(event))
+    if (event is BaseIntegrationEvent) {
+      eventBus.publish(IntegrationEventMessage(event))
     }
   }
 }

@@ -1,5 +1,7 @@
 package hexagon.adapter.config
 
+import hexagon.adapter.eventbus.EventDispatcher
+import hexagon.adapter.eventbus.HexagonEventBus
 import hexagon.adapter.eventbus.IntegrationEventPublisherInterface
 import hexagon.domain.EventDispatcherInterface
 import javax.sql.DataSource
@@ -25,8 +27,8 @@ open class AxonConfig(private val integrationEventPublisher: IntegrationEventPub
   }
 
   @Bean
-  open fun hexagonEventBus(): hexagon.adapter.eventbus.HexagonEventBus {
-    return hexagon.adapter.eventbus.HexagonEventBus(integrationEventPublisher)
+  open fun hexagonEventBus(): HexagonEventBus {
+    return HexagonEventBus(integrationEventPublisher)
   }
   @Bean
   open fun queryBus(): QueryBus {
@@ -42,6 +44,6 @@ open class AxonConfig(private val integrationEventPublisher: IntegrationEventPub
 
   @Bean
   open fun eventDispatcher(eventBus: EventBus): EventDispatcherInterface {
-    return hexagon.adapter.eventbus.EventDispatcher(eventBus)
+    return EventDispatcher(eventBus)
   }
 }
